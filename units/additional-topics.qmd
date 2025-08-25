@@ -554,7 +554,7 @@ With newer versions of Conda, you can use the `libmamba` dependency "resolver" b
 ### Reproducibility and package management
 
 For reproducibility, it's important to know the versions of the packages you use (and the version of Python).
-`pip` and `conda` make it easy to do this. You can create a *requirements* file that captures the packages you are currently using (and, critically, their versions) and then install exactly that set of packages (and versions) based on that requirements file.
+`pip` and `conda` make it easy to do this. You can create a *requirements* file that captures the packages you are currently using (and, critically, their versions) and then install exactly that set of packages (and versions) based on that requirements file. (Note that installing on a different operating system will often fail because the requirements file includes build-specific versioning that only works on the specific operating system, so using on a different OS can require one to pass additional flags to the commands below.)
 
 ```bash
 ## Reproducing using pip.

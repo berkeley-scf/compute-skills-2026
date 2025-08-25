@@ -20,6 +20,7 @@ Skills related to computation, coding, and reproducibility are crucial for moder
 The department will be holding a computational skills workshop the week before classes start, focusing on best practices and standard tools for computation, code development and statistics/data science workflows. The goal is that having completed the workshop, students will have a common foundation for their coursework and for PhD students for computation during their thesis work.
 
 The topics include:
+
   - an optional introduction to the (Linux) shell,
   - an optional introduction to Python,
   - use of version control (in particular git) as a single user and for collaboration,

@@ -704,6 +704,8 @@ cat test_newton.py
 pytest test_newton.py
 ```
 
+(From within Python, you can run `pytest.main()`.)
+
 ## Exercise: Test cases
 
 With a partner, brainstorm some test cases for your implementation of Newton's method in terms of the user's function and input values a user might provide.

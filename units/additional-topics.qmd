@@ -519,6 +519,13 @@ At the [numpy GitHub repository](https://github.com/numpy/numpy), by looking in 
 
 It would take more work to make the package available in a repository such as PyPI or via Conda.
 
+### Tests in a package
+
+To set up tests, see the structure of the `tests` directory of `mytoy`. You'll one or more test files with "test" in their filename(s). Having an `__init__.py` (such as the empty one in `mytoy/tests`) is not required (as far as I know).
+
+You can then run `pytest` (in which case `pytest` will try to find all tests
+in the current directory and its subdirectories) or `pytest mytoy` to only run the tests in the `mytoy` subdirectory.
+
 ## Exercise: Make your own package
 
 Make a package out of your Newton method code, following the structure of `mytoy`. Include your tests as part of the package.

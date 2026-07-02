@@ -136,3 +136,24 @@ Then (only the first time you are doing all this):
 ::: {.callout-warning}
 If you run `git push` and get a permission denied or 403 error or Git asks for a password, something has gone wrong with one of the three steps above.
 :::
+
+
+# Backup Option for Accessing GitHub repositories Using a Personal Authentical Token
+
+If you run into trouble with the above steps, here is a work-around that involves setting up your own personal authentication token (PAT) to use as a password.
+
+Steps:
+
+    1. Log in to your account the GitHub website (this accepts your standard GitHub password).
+
+    2. Go to `github.com/settings/tokens`.
+
+    3. Click `personal access tokens`, and under the dropdown click `Tokens (classic)`.
+
+    4. Click `Generate new token` and `Generate new token (classic)` from the dropdown.
+
+    5. Give the token a name in the `Note` section, select how long you want the token to be active for, and under `Select scopes` click the `repo` checkbox.
+
+    6. The token will appear in a green box (it will be a long sequence of letters and numbers). Make sure to copy and store it somewhere safe! This is the only time GitHub will ever tell you what that PAT is.
+
+These steps only need to be done once (or for as long as you made your token active). Each time you need to push to the DataHub and you are prompted for a username/password, use this as your password!

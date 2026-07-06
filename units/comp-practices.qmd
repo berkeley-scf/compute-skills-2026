@@ -162,6 +162,8 @@ total 40
 <snip>
 ```
 
+(One can also see the info about the remote repository with `git remote -v`.)
+
 #### Step 2. Add files
 
 Next move (or copy) your Python module into the repository directory. For the demo, I'll use a version of the Newton code that I wrote that has some bugs in it (for later debugging). The file is not in the repository.
@@ -278,7 +280,7 @@ Fernando Perez's Statistics 159/259 materials have a nice visualization ([online
 
 Note that we haven't actually seen in practice some of what is shown in the visual: tags, branches, and merging, but we'll be using those ideas later.
 
-[Fernando's lecture materials from Statistics 159/259](https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html) illustrate that the steps shown in the visualization correspond exactly to what happens when running the Git commands from the command line.
+[Fernando's lecture materials from Statistics 159/259](https://stat159.berkeley.edu/fall-2025/lectures/intro-git/git-visuals) illustrate that the steps shown in the visualization correspond exactly to what happens when running the Git commands from the command line.
 
 
 ## Key components and terminology
@@ -722,7 +724,7 @@ Include tests for:
 
 - successful optimization
 - unsuccessful optimization
-- invalid user inputs
+- invalid user inputs (i.e., checking the error is correctly trapped) 
 - (if you have time) situations where Newton's method is not converging to a local minimum
 
 with the expected output being what you *want* to happen, not necessarily what your function does.

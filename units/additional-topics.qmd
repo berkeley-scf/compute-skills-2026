@@ -348,7 +348,7 @@ deriv(np.sin, 0.2, 1e-16)
 deriv(np.sin, 0.2, 1e-17)
 ```
 
-### Linear algebra errors
+### Linear algebra errors (optional)
 
 The errors seen in doing calculations, such as catastrophic cancellation, cascaded through derivative estimation. That also happens when doing linear algebra operations.
 
@@ -547,21 +547,22 @@ package depends, whereas with pip you sometimes need to install a system package
 satisfy a dependency.
 
 ::: {.callout-tip}
-## Faster installation with Mamba
+## Dependency resolution and Conda/Mamba
 
 It's not uncommon to run into a case where conda has trouble installing a package
-because of version inconsistencies amongst the dependencies. `mamba` is a drop-in
-replacement for `conda` and often does a better job of this "dependency resolution".
-[We use `mamba` by default on the SCF](https://statistics.berkeley.edu/computing/software/install).
+because of version inconsistencies amongst the dependencies.
 
-With newer versions of Conda, you can use the `libmamba` dependency "resolver" by running `conda config --set solver libmamba`, which adds `solver: libmamba` to your `.condarc` file.
+As of version 23.10.0 (fall 2023) of Conda, it defaults to using a faster and better "solver" to resolve
+dependencies, called `mamba`.
+
+With older versions of conda , you can use the `libmamba` dependency "resolver" by running `conda config --set solver libmamba`, which adds `solver: libmamba` to your `.condarc` file.
 
 :::
 
 ### Reproducibility and package management
 
 For reproducibility, it's important to know the versions of the packages you use (and the version of Python).
-`pip` and `conda` make it easy to do this. You can create a *requirements* file that captures the packages you are currently using (and, critically, their versions) and then install exactly that set of packages (and versions) based on that requirements file. (Note that installing on a different operating system will often fail because the requirements file includes build-specific versioning that only works on the specific operating system, so using on a different OS can require one to pass additional flags to the commands below.)
+`pip` and `conda` make it easy to do this. You can create a *requirements* file that captures the packages you are currently using (and, critically, their versions) and then install exactly that set of packages (and versions) based on that requirements file. 
 
 ```bash
 ## Reproducing using pip.
@@ -569,13 +570,23 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 
 ## Reproducing a Conda environment.
-conda env export > environment.yml
+conda env export --no-builds > environment.yml
 conda env create -f environment.yml
 ```
 
-Conda is a general package manager. You can use it to manage Python packages but lots of other software as well, including R and Julia.
 
-#### Fully isolating your Conda environment
+::: {.callout-warning}
+## Portable Conda recipes
+If you just use `conda env export`, installing on a different operating system will generally fail because the requirements file includes build-specific versioning (using hashtags) that only works on the specific operating system. The `--no-builds` flag omits that information and just includes version numbers.
+:::
+
+::: {.callout-tip}
+## Conda is for more than just Python
+Conda is a general package manager. You can use it to manage Python packages but lots of other software as well, including R and Julia.
+:::
+
+
+#### Fully isolating your Conda environment (optional)
 
 Conda environments provide an additional layer of modularity/reproducibility, allowing you to set up a fully reproducible environment for your computation. Here (by explicitly giving `python=3.11`) the Python 3.11 executable and all packages you install in the environment are fully independent  of whatever Python executables are installed on the system. (That said, there are [some caveats](https://statistics.berkeley.edu/computing/software/install#conda-isolate) that can make it a bit of headache to ensure full isolation.)
 
@@ -591,6 +602,7 @@ conda install numpy
 ## (Optionally) saving the recipe:
 conda env export > my_iso_env.yml
 ```
+
 
 ::: {.callout-warning}
 ## Activating an environment
@@ -753,4 +765,6 @@ Chris runs `quarto publish gh-pages` to update the site. Quarto will (on the loc
 
 # Feedback survey
 
-This is only the second time we've done this, so it's helpful now to get feedback on it. Please fill out this [brief survey](https://docs.google.com/forms/d/e/1FAIpQLScXrPcjThkfguJ56zbtU_VB8aZ1K5fWBeLaY4GDZNnEve1JJQ/viewform?usp=dialog).
+[UNDER CONSTRUCTION]
+
+Please fill out this [brief survey](https://docs.google.com/forms/d/e/XYZ).

@@ -555,7 +555,7 @@ because of version inconsistencies amongst the dependencies.
 As of version 23.10.0 (fall 2023) of Conda, it defaults to using a faster and better "solver" to resolve
 dependencies, called `mamba`.
 
-With older versions of conda , you can use the `libmamba` dependency "resolver" by running `conda config --set solver libmamba`, which adds `solver: libmamba` to your `.condarc` file.
+With older versions of conda , you can also use the `libmamba` dependency "resolver" by running `conda config --set solver libmamba`, which adds `solver: libmamba` to your `.condarc` file.
 
 :::
 

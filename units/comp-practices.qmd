@@ -164,6 +164,14 @@ total 40
 
 (One can also see the info about the remote repository with `git remote -v`.)
 
+::: {.callout-tip title="HTTPS vs. SSH protocol for accessing GitHub (advanced)" collapse="true"}
+Most of you should ignore this note if you're just getting started with Git and GitHub.
+
+However, some of you may be familiar with `git clone git@github.com:<username>/repository`, which uses the SSH protocol to interact with GitHub.
+
+That would be fine too, including for this workshop, but only if you know what you are doing. It would require [using SSH keys](../git-ssh.html) to authenticate from DataHub to GitHub when we get to the point of pushing changes to GitHub, whereas we provide instructions based on HTTPS.
+:::
+
 #### Step 2. Add files
 
 Next move (or copy) your Python module into the repository directory. For the demo, I'll use a version of the Newton code that I wrote that has some bugs in it (for later debugging). The file is not in the repository.

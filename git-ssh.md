@@ -1,5 +1,5 @@
 ---
-title: "Using the SSH protocol to connect from DataHub to GitHub
+title: "Using the SSH protocol to connect from DataHub to GitHub"
 format:
   html:
     theme: cosmo

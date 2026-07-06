@@ -1,4 +1,4 @@
-::: {.callout-warning title="Using AI assistance"}
+::: {.callout-warning title="Using AI assistance" collapse="true"}
 
 I think it's fair to say that most of us are still trying to understand how best to learn with the help of AI, without fooling ourselves into using AI without really learning/understanding.
 

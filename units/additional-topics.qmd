@@ -424,6 +424,38 @@ Here are the detailed steps of how to do all that:
 
 Then review the pull request your partner made to YOUR repository. Iterate with your partner until you are happy to merge the pull request into your repository. Remember to then run `git pull` to get the changes in the local copy of the repository.
 
+## Forking and contributing to projects 'upstream' (advanced)
+
+What you just did in the exercise is very similar to how open source projects work with external developers who want to contribute to the project. The project on GitHub is referred to as "upstream".
+
+Here's how it works, in the form of a diagram. 
+
+![Figure: Visualization of working with upstream repositories (Credit: https://www.kubernetes.dev/docs/guide/github-workflow)](contributing_workflow.png){fig-alit="visualization of working with upstream repositories"}
+
+Note that Step 3 allows you to ensure that your local copy of the repository is up-to-date with the remote copy upstream. If there are no changes to the upstream branch you are contributing to between when you fork and when you create the pull request, you wouldn't need Step 3. But if you were to continue contributing in the future, you'd want to run Step 3 to update the main branch locally before creating your own new branch for your next contribution.
+
+Also note that after running `git remote add upstream ...`, you can run `git remote -v` to see that your repository's configuration shows "upstream" as the label for the remote repository. This will be in addition to seeing "origin" as the label for your fork of that repository.
+
+## Merging vs. rebasing (advanced)
+
+You'll probably run across the idea of rebasing at some point. In fact it's mentioned just above in relation to updating your local repository from upstream.
+
+A rebase moves a series of commits to a new base commit, as if you had just done the work of those commits starting from that base commit instead of starting from the commit you actually started from (usually further back in the history of commits). It can be a good thing to do in some cases as it produces a simpler history of commits than a regular merge (in which the commit that does the merge combines the changes from both branches).
+
+A merge looks like this:
+
+![Figure: Merge commit (Credit: https://www.geeksforgeeks.org/git/git-difference-between-merging-and-rebasing/)](merge.png){fig-alit="visualization of merge commit"}
+
+while a rebase looks like this, with the three orange commits above moved such that it looks like they were just done directly on the tip of the Main branch. In fact the three orange commits are removed and the changes are redone as the three new green * commits 
+
+![Figure: Rebase (Credit: https://www.geeksforgeeks.org/git/git-difference-between-merging-and-rebasing/)](rebase.png){fig-alt="visualization of merge commit"}
+
+::: {.callout-important title="Only rebase if know what you are doing"}
+Rebasing involves changing the commit history by deleting the original commits and replaying them onto the new base commit. That will mess things up for others if other users have access to those commits.
+
+Therefore only rebase if those commits are only in your local repository and not pushed to a remote.
+:::
+
 
 # 9. Packaging and Conda environments
 
@@ -648,7 +680,7 @@ Python *wheels* are a binary package format for Python packages. Wheels for some
 (i.e., operating system) so that the package will install correctly on the system where it is being installed.
 
 
-# 10. GitHub Actions and Continuous Integration
+# 10. Containers, GitHub Actions and Continuous Integration
 
 Having reproducible environments (e.g., Conda environments or Docker containers) provides the ability to run (and automate) various actions to run on remote/cloud computational resources and know that they (should) work.
 

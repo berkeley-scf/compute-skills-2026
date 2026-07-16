@@ -22,12 +22,12 @@
       items:
         - type: "Module"
           id: "3"
-          name: "Computational Best Practices"
+          name: "Computational Tools and Practices I"
           href: "./units/comp-practices.html"
     - date: "Aug 21"
       items:
         - type: "Module"
           id: "4"
-          name: "Additional Topics"
+          name: "Computational Tools and Practices II"
           href: "./units/additional-topics.html"
  

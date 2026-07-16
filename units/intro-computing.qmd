@@ -3,7 +3,7 @@ title: "Introduction to Computing and the Command Line (optional)"
 format:
   html:
     theme: cosmo
-    css: ../styles.css
+    css: ../assets/styles.css
     toc: true
     code-copy: true
     code-block-background: true
@@ -142,7 +142,7 @@ Here's how you can see where you are using the `pwd` ("print working directory")
 
 ```bash
 $ pwd
-/home/jovyan/compute-skills-2025
+/home/jovyan/compute-skills-2026
 ```
 
 
@@ -165,14 +165,14 @@ Now let's go into a subdirectory. We can use `cd` with the name of the subdirect
 ```bash
 $ cd units
 $ pwd
-/home/jovyan/compute-skills-2025/units
+/home/jovyan/compute-skills-2026/units
 ```
 
-We could also navigate through nested subdirectories. For example, after going back to our home directory (using `cd` alone will do this), let's go to the `units` subdirectory of the `compute-skills-2025` subdirectory. The `/` is a separate character that distinguishes the nested subdirectories.
+We could also navigate through nested subdirectories. For example, after going back to our home directory (using `cd` alone will do this), let's go to the `units` subdirectory of the `compute-skills-2026` subdirectory. The `/` is a separate character that distinguishes the nested subdirectories.
 
 ```bash
 $ cd
-$ cd compute-skills-2025/units
+$ cd compute-skills-2026/units
 ```
 
 You can access the parent directory of any directory using `..`:
@@ -180,7 +180,7 @@ You can access the parent directory of any directory using `..`:
 ```bash
 $ cd ..
 $ pwd
-/home/jovyan/compute-skills-2025
+/home/jovyan/compute-skills-2026
 ```
 
 We can get more complicated in our use of `..` with relative paths. Here we'll go up a directory and then down to a different subdirectory.
@@ -189,7 +189,7 @@ We can get more complicated in our use of `..` with relative paths. Here we'll g
 $ cd units
 $ cd ../assets
 $ pwd
-/home/jovyan/compute-skills-2025/assets
+/home/jovyan/compute-skills-2026/assets
 ```
 
 And here we'll go up two directories and then down to another subdirectory (but note that `/home/jovyan/tmp` may not exist for your server).
@@ -207,9 +207,9 @@ All of the above examples used **relative** paths to navigate based on your work
 We can instead use **absolute** paths so that it doesn't matter where we are when we run the command. Specifying an absolute path is done by having your path start with `/`, such as `/home/jovyan`. If the path doesn't start with `/` then it is interpreted as being a relative path, relative to your working directory. Here we'll go to the `units` subdirectory again, but this time using an absolute path. 
 
 ```bash
-$ cd /home/jovyan/compute-skills-2025/units 
+$ cd /home/jovyan/compute-skills-2026/units 
 $ pwd
-/home/jovyan/compute-skills-2025/units
+/home/jovyan/compute-skills-2026/units
 ```
 
 ::: {.callout-warning}
@@ -225,10 +225,10 @@ Using absolute paths is generally a bad idea for reproducibility and automation 
 
 The filesystem is basically a upside-down tree.
 
-For example, if we just consider the `compute-skills-2025` directory, we can see the tree structure using `tree` (not available on DataHub):
+For example, if we just consider the `compute-skills-2026` directory, we can see the tree structure using `tree` (not available on DataHub):
 
 ```bash
-$ cd /home/jovyan/compute-skills-2025
+$ cd /home/jovyan/compute-skills-2026
 $ tree
 ```
 
@@ -254,7 +254,7 @@ Often (as is the case here), that would print out a lot of files and directories
 │   │       └── quarto-listing.js
 ```
 
-The dot (`.`) means "this directory", so the top of the tree here is the `compute-skills-2025` directory itself, within which there are various subdirectories. Then within each of these are files and further subdirectories.
+The dot (`.`) means "this directory", so the top of the tree here is the `compute-skills-2026` directory itself, within which there are various subdirectories. Then within each of these are files and further subdirectories.
 
 If we consider the entire filesystem, the top, or root of the tree, is the `/` directory. Within `/` there are subdirectories, such as `/home` (which contains users' home directories where all of the files owned by a user are stored) and `/bin` (containing UNIX programs, aka 'binaries'). We'll use `ls` again, this time telling it the directory to operate on:
 
@@ -317,7 +317,7 @@ $ pwd
 Let's look more at various ways to use commands. We just saw the `ls` command. Here's one way we can modify the behavior of the command by passing a command option. Here the `-F` option (also called a *flag*) shows directories by appending `/` to anything that is a directory (rather than a file) and a `*` to anything that is an executable (i.e., a program).
 
 ```bash
-$ cd compute-skills-2025
+$ cd compute-skills-2026
 $ ls -F
 $ ls -F /usr/bin
 ```
@@ -344,7 +344,7 @@ drwxr-xr-x 4 jovyan jovyan     4096 Jul 19 14:55  test-jh
 drwxr-xr-x 2 jovyan jovyan     4096 Jul 19 15:52  tmp
 -rw-r--r-- 1 jovyan jovyan        0 Jul 31 14:10  untitled.py
 -rw-r--r-- 1 jovyan jovyan      617 Jul 31 14:12  Untitled3.ipynb
-drwxr-xr-x 7 jovyan jovyan     4096 Aug  1 15:45  compute-skills-2025
+drwxr-xr-x 7 jovyan jovyan     4096 Aug  1 15:45  compute-skills-2026
 -rw-r--r-- 1 jovyan jovyan        0 Aug  1 16:03  example.txt
 ```
 
@@ -426,7 +426,7 @@ Anything that follows `#` is a comment and is ignored.
 ```bash
 $ # This is ignored
 $ ls  # Everything after the # is ignored
- compute-skills-2025                          test-jh           Untitled2.ipynb
+ compute-skills-2026                          test-jh           Untitled2.ipynb
  data_c80_regsample_3.dta                     test-private      Untitled3.ipynb
 
 ```
@@ -461,7 +461,7 @@ cd com
 ech
 ```
 
-The first should allow you to get `compute-skills-2025` and the second `echo`.
+The first should allow you to get `compute-skills-2026` and the second `echo`.
 
 ::: {.callout-tip}
 ## Tab completion everywhere
@@ -495,7 +495,7 @@ python is /srv/conda/bin/python
 You'll often want to make a copy (`cp`) of a file, move it (`mv`) between directories, or remove it (`rm`). 
 
 ```bash
-$ cd ~/compute-skills-2025/units
+$ cd ~/compute-skills-2026/units
 $ cp calc.py calc-new.py
 $ mv calc-new.py /tmp/.
 $ cd /tmp

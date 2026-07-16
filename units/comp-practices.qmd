@@ -3,7 +3,7 @@ title: "Version control, programming, and testing"
 format:
   html:
     theme: cosmo
-    css: ../styles.css
+    css: ../assets/styles.css
     toc: true
     code-copy: true
     code-block-background: true
@@ -127,7 +127,7 @@ In the terminal, let's make a small change to the README, register the change wi
 
 #### Step 1. Clone the repository
 
-First make a local copy of the repository from the remote copy on GitHub. It's best do this **outside** of the `compute-skills-2025` directory; otherwise you'll have a repository nested within a repository. 
+First make a local copy of the repository from the remote copy on GitHub. It's best do this **outside** of the `compute-skills-2026` directory; otherwise you'll have a repository nested within a repository. 
 
 ```bash
 ## First `cd` to your home directory to avoid cloning a repo within a repo.
@@ -178,7 +178,7 @@ Next move (or copy) your Python module into the repository directory. For the de
 
 ```bash
 cd ~/newton-practice
-cp ../compute-skills-2025/units/newton-buggy.py newton.py
+cp ../compute-skills-2026/units/newton-buggy.py newton.py
 
 ## Tell git to track the file (put it in the staging area).
 git add newton.py

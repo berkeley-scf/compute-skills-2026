@@ -3,7 +3,7 @@ title: "Introduction to Python (optional)"
 format:
   html:
     theme: cosmo
-    css: ../styles.css
+    css: ../assets/styles.css
     toc: true
     code-copy: true
     code-block-background: true

@@ -1,6 +1,6 @@
 ---
 title: "Berkeley Statistics Computational Skills Workshop"
-subtitle: "UC Berkeley, August 2025"
+subtitle: "UC Berkeley, August 2026"
 listing:
   - id: schedule
     template: assets/schedule.ejs
@@ -36,8 +36,8 @@ Location: [330 Evans Hall](https://www.berkeley.edu/map/evans-hall/)
 
 Times:
 
- - Monday August 18, 9:00 a.m - 5:00 p.m. with a one-hour lunch break.
- - Tuesday August 19, 9:00 a.m - 3:30 p.m. with a one-hour lunch break.
+ - Monday August 17, 9:00 a.m - 5:00 p.m. with a one-hour lunch break.
+ - Tuesday August 18, 9:00 a.m - 3:30 p.m. with a one-hour lunch break.
 
 Lunch: On your own.
 
@@ -45,10 +45,10 @@ Snacks: Light refreshments during morning and afternoon breaks
 
 ### Core Sessions (Wednesday/Thursday)
 
-Location: [150 GSPP](https://www.berkeley.edu/map/goldman-school). Enter from the door at 1893 Le Roy Avenue and turn left immediately.
+Location: TBD
 
- - Wednesday August 20, 9:00 a.m - 5:00 p.m. with a one-hour lunch break.
- - Thursday August 21, 9:00 a.m - 3:30 p.m. with a one-hour lunch break.
+ - Wednesday August 19, 9:00 a.m - 5:00 p.m. with a one-hour lunch break.
+ - Thursday August 20, 9:00 a.m - 3:30 p.m. with a one-hour lunch break.
 
 Lunch: On your own.
 
@@ -59,7 +59,7 @@ Snacks: Light refreshments during morning and afternoon breaks
 - If you don't already have a GitHub account, please [sign up for an account](http://github.com/signup).
 - Bring your laptop as the workshop will focus on hands-on work.
 - (Optional/special case) We'll be using the campus DataHub as our [primary computational environment](prep.html), so you don't need to install anything on your laptop, though you can install Git and Python on your laptop if you wish.
-- (Completely optional) Last year, a few participants mentioned they would have liked to think about the coding problem in advance before Wednesday's [Computational Tools and Practices module](https://computing.stat.berkeley.edu/compute-skills-2025/units/comp-practices.html). If you think you'd like to do that, simply take a look at the [first section of the module](https://computing.stat.berkeley.edu/compute-skills-2025/units/comp-practices.html#our-running-example-newtons-method-for-optimization) and consider writing Python code to implement Newton's method.
+- (Completely optional) Last year, a few participants mentioned they would have liked to think about the coding problem in advance before Wednesday's [Computational Tools and Practices module](https://computing.stat.berkeley.edu/compute-skills-2026/units/comp-practices.html). If you think you'd like to do that, simply take a look at the [first section of the module](https://computing.stat.berkeley.edu/compute-skills-2026/units/comp-practices.html#our-running-example-newtons-method-for-optimization) and consider writing Python code to implement Newton's method.
 
 
 

@@ -3,7 +3,7 @@ title: "More git, numerics, reproducibility, and automation"
 format:
   html:
     theme: cosmo
-    css: ../styles.css
+    css: ../assets/styles.css
     toc: true
     code-copy: true
     code-block-background: true
@@ -418,7 +418,7 @@ Here are the detailed steps of how to do all that:
 2. On DataHub, clone the forked repository: `git clone https://github.com/<your_username>/newton-practice-<partner_name>`.
 3. On DataHub, enter the directory of the cloned repository: `cd newton-practice-<partner_name>`.
 4. Make a branch, make changes, add, and commit.
-5. Give DataHub access to the new repository via [Step 3 of the steps for accessing GitHub repository from DataHub](https://berkeley-scf.github.io/compute-skills-2025/prep.html#give-access-to-the-specific-github-repository-you-are-working-with).
+5. Give DataHub access to the new repository via [Step 3 of the steps for accessing GitHub repository from DataHub](https://berkeley-scf.github.io/compute-skills-2026/prep.html#give-access-to-the-specific-github-repository-you-are-working-with).
 6. Push the commit to your GitHub: `git push -u origin newton-practice-<partner_name>`.
 7. Go to `https://github.com/<your_username>/newton-practice-<partner_name>` and open a pull request ("Compare and pull request") with the new branch. The request will automatically be done in the GitHub account of your partner.
 
@@ -793,7 +793,7 @@ To set up GitHub Pages for a repository, go to `https://github.com/github_org/re
 
 In fact the website for this workshop was done using Quarto, which uses GitHub Pages and GitHub Actions behind the scenes.
 
-Chris runs `quarto publish gh-pages` to update the site. Quarto will (on the local machine) render the html (convert the Markdown to html) and then behind the scenes Quarto uses [GitHub Actions](https://github.com/berkeley-scf/compute-skills-2025/actions) and [GitHub Pages (via the `gh-pages branch)](https://github.com/berkeley-scf/compute-skills-2025/tree/gh-pages) to publish the website.
+Chris runs `quarto publish gh-pages` to update the site. Quarto will (on the local machine) render the html (convert the Markdown to html) and then behind the scenes Quarto uses [GitHub Actions](https://github.com/berkeley-scf/compute-skills-2026/actions) and [GitHub Pages (via the `gh-pages branch)](https://github.com/berkeley-scf/compute-skills-2026/tree/gh-pages) to publish the website.
 
 # Feedback survey
 

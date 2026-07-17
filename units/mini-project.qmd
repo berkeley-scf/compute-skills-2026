@@ -17,14 +17,19 @@ execute:
 # Background
 This project should give you practice with core Python data structures (particularly dictionaries and lists), navigating complicated data objects, text manipulation, functions, and looping/map operations.
 
-The goal of the project is to analyze the tweeting behavior of the 100 US Senators in the US Senate. Each senator has a Twitter account and puts out tweets reflecting their thought and communicating with the people in the state they represent.
+The goal of the project is to analyze the tweeting behavior of the 100 US Senators in the US Senate in early 2017. Each senator had a Twitter account and puts out tweets reflecting their thought and communicating with the people in the state they represent. The data reflect tweeting just before President Obama stepped down and President Trump began his first term.
 
-(Note that these tweets were downloaded early in 2017, so they reflect tweeting just before President Obama stepped down and President Trump began his term.)
+::: {.callout-note title="Why are the data so old?"}
+I did a bit of work in summer 2026 to try to update to use data on current Tweeting behavior on X. I bought $5 in credits and immediately used it all up just in getting a list of the handles for the US senators  and downloading 100 tweets for the **first** of those senators. Apparently X needs the money to support SpaceX's incredibly-high stock price/valuation!
+
+So, rather than further contribute to the possible bubble in SpaceX stock, we'll use the very old data...
+
+:::
 
 The goal of the project questions is to guide you through the steps of getting the data, processing and cleaning it, putting it in a format that makes it easier to analyze and then doing some basic analysis. The last few questions ask you to see if whether a senator mentions a president or presidential candidate depends on the party that the senator is part of. For example, do Democratic senators mention Barack Obama in their tweets more or less than Republican senators? 
 
 ::: {.callout-note title="Getting the data using API calls"}
-For background information only, I'll note that [this Python code](../project/fetch_senator_tweets.py) downloads tweets using the Python twitter package to interact with Twitter's API. In 2017, you would only be able to run that code if you set up your own Twitter account and follow the instructions at the start of the file regarding filling in the authentication information (CONSUMER_KEY, CONSUMER_SECRET, etc.). Eight years later and with the transition from Twitter to X, I suspect the code would need to be modified.
+For background information only, I'll note that [this Python code](../project/fetch_senator_tweets.py) downloads tweets using the Python twitter package to interact with Twitter's API. In 2017, you would only be able to run that code if you set up your own Twitter account and follow the instructions at the start of the file regarding filling in the authentication information (CONSUMER_KEY, CONSUMER_SECRET, etc.). Eight years later and with the transition from Twitter to X, one would have to modify the code (e.g., to use the X version 2 API).
 :::
 
 I've already run the code mentioned above and downloaded the data for you.  The downloaded information on the senators' twitter accounts is in `project/senators-list.json` in the workshop materials, while the downloaded tweets are in `timelines.json`.  `timelines.json` is too big to put in the Github repository. You can find it at <http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json>. One way to get the file to DataHub is to use `wget` in the terminal in DataHub. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request.

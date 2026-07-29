@@ -462,7 +462,7 @@ Warning
 </div>
 </div>
 <p>Once you have your module, you can use it like this:</p>
-<div id="1dabe658" class="cell" data-execution_count="1">
+<div id="05d20133" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -727,7 +727,7 @@ Note
 <p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</p>
 <p>We can illustrate what Git is doing easily in Python.</p>
 <p>Let’s create a first hash:</p>
-<div id="386287e5" class="cell" data-execution_count="2">
+<div id="2727e1ce" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hashlib <span class="im">import</span> sha1</span>
@@ -743,7 +743,7 @@ Note
 </div>
 </div>
 <p>￼ Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
-<div id="e6a266fc" class="cell" data-execution_count="3">
+<div id="357c0cce" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> <span class="st">b'Some more text in my paper...'</span></span>
@@ -942,7 +942,7 @@ Note
 <li>Comments should generally be complete sentences.</li>
 </ul></li>
 <li><p>You can use parentheses to group operations such that they can be split up into lines and easily commented, e.g.,</p>
-<div id="96510990" class="cell" data-execution_count="4">
+<div id="2299deef" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> (</span>
@@ -1007,7 +1007,7 @@ Note
 <section id="using-the-jupyterlab-visual-debugger" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-jupyterlab-visual-debugger">Using the JupyterLab visual debugger</h3>
 <p>Let’s debug my buggy implementation of Newton’s method.</p>
-<div id="6d9508cf" class="cell" data-execution_count="5">
+<div id="a0e3633b" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -1057,7 +1057,7 @@ Note
 </div>
 </div>
 </div>
-<p>If we want to debug into functions defined in files, we can add <code>breakpoint()</code> in the location in the file where we want the breakpoint and one should see the code in the <code>SOURCE</code> box in the debugger panel. So far, I’ve found this to be a bit hard to use, but that may well just be my inexperience with the JupyterLab debugger.</p>
+<p>If we want to debug into functions defined in files, we can add <code>breakpoint()</code> in the location in the file where we want the breakpoint and one should see the code in the <code>SOURCE</code> box in the debugger panel. So far, I haven’t gotten this to work with Jupyter, but that may well just be my inexperience with the JupyterLab debugger.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1075,7 +1075,7 @@ Warning
 <section id="using-the-ipython-debugger-ipdb" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-ipython-debugger-ipdb">Using the IPython debugger (<code>ipdb</code>)</h3>
 <p>We can use the IPython <code>%debug</code> “magic” to activate a debugger as well.</p>
-<p>One way this is particularly useful is “post-mortem” debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke <code>%debug</code> and then (re)run the code that is failing. The <code>ipdb</code> debugger will be invoked when the error occurs.</p>
+<p>One way this is particularly useful is “post-mortem” debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke <code>%debug</code> and then (re)run the code that is failing. The <code>ipdb</code> debugger will be invoked when the error occurs. For this to work, we need to first turn on the Jupyter notebook debugger.</p>
 <p>Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):</p>
 <ul>
 <li><code>c</code> to continue execution (until the end or the next breakpoint)</li>
@@ -1662,7 +1662,7 @@ if x &gt; 3:
 <span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>This module presents the core content of the workshop on version control (using Git), code style, documentation, and testing.</span>
 <span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>{{&lt; include ai.qmd &gt;}}</span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>{{&lt; include _ai.qmd &gt;}}</span>
 <span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Our running example: Newton's method for optimization</span></span>
 <span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a></span>
@@ -2298,7 +2298,7 @@ if x &gt; 3:
 <span id="cb30-663"><a href="#cb30-663" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-664"><a href="#cb30-664" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-665"><a href="#cb30-665" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-666"><a href="#cb30-666" aria-hidden="true" tabindex="-1"></a>If we want to debug into functions defined in files, we can add <span class="in">`breakpoint()`</span> in the location in the file where we want the breakpoint and one should see the code in the <span class="in">`SOURCE`</span> box in the debugger panel. So far, I've found this to be a bit hard to use, but that may well just be my inexperience with the JupyterLab debugger.</span>
+<span id="cb30-666"><a href="#cb30-666" aria-hidden="true" tabindex="-1"></a>If we want to debug into functions defined in files, we can add <span class="in">`breakpoint()`</span> in the location in the file where we want the breakpoint and one should see the code in the <span class="in">`SOURCE`</span> box in the debugger panel. So far, I haven't gotten this to work with Jupyter, but that may well just be my inexperience with the JupyterLab debugger.</span>
 <span id="cb30-667"><a href="#cb30-667" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-668"><a href="#cb30-668" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb30-669"><a href="#cb30-669" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
@@ -2310,7 +2310,7 @@ if x &gt; 3:
 <span id="cb30-675"><a href="#cb30-675" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-676"><a href="#cb30-676" aria-hidden="true" tabindex="-1"></a>We can use the IPython <span class="in">`%debug`</span> "magic" to activate a debugger as well.</span>
 <span id="cb30-677"><a href="#cb30-677" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-678"><a href="#cb30-678" aria-hidden="true" tabindex="-1"></a>One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke <span class="in">`%debug`</span> and then (re)run the code that is failing. The <span class="in">`ipdb`</span> debugger will be invoked when the error occurs.</span>
+<span id="cb30-678"><a href="#cb30-678" aria-hidden="true" tabindex="-1"></a>One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke <span class="in">`%debug`</span> and then (re)run the code that is failing. The <span class="in">`ipdb`</span> debugger will be invoked when the error occurs. For this to work, we need to first turn on the Jupyter notebook debugger.</span>
 <span id="cb30-679"><a href="#cb30-679" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-680"><a href="#cb30-680" aria-hidden="true" tabindex="-1"></a>Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):</span>
 <span id="cb30-681"><a href="#cb30-681" aria-hidden="true" tabindex="-1"></a></span>

@@ -322,6 +322,7 @@ window.Quarto = {
   <li><a href="#example-2-github-actions-for-automated-testing" id="toc-example-2-github-actions-for-automated-testing" class="nav-link" data-scroll-target="#example-2-github-actions-for-automated-testing">Example 2: GitHub Actions for automated testing</a>
   <ul class="collapse">
   <li><a href="#joint-demoexercise" id="toc-joint-demoexercise" class="nav-link" data-scroll-target="#joint-demoexercise">Joint demo/exercise</a></li>
+  <li><a href="#exercise-automated-testing-with-your-repository" id="toc-exercise-automated-testing-with-your-repository" class="nav-link" data-scroll-target="#exercise-automated-testing-with-your-repository">Exercise: automated testing with your repository</a></li>
   </ul></li>
   <li><a href="#example-3-github-actions-for-publishing-webpages" id="toc-example-3-github-actions-for-publishing-webpages" class="nav-link" data-scroll-target="#example-3-github-actions-for-publishing-webpages">Example 3: GitHub Actions for publishing webpages</a>
   <ul class="collapse">
@@ -555,7 +556,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <h3 class="anchored" data-anchor-id="random-number-seed">Random number seed</h3>
 <p>The <em>seed</em> determines where in the cycle of the periodic sequence you are.</p>
 <p>It’s critical for ensuring reproducibility when running code that uses random numbers</p>
-<div id="aace9f16" class="cell" data-execution_count="1">
+<div id="5b97c3bc" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -566,7 +567,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>array([ 1.62434536, -0.61175641, -0.52817175, -1.07296862,  0.86540763])</code></pre>
 </div>
 </div>
-<div id="b3bd010a" class="cell" data-execution_count="2">
+<div id="1ffdafb2" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np.random.normal(size <span class="op">=</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -575,7 +576,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>array([-2.3015387 ,  1.74481176, -0.7612069 ,  0.3190391 , -0.24937038])</code></pre>
 </div>
 </div>
-<div id="761a652d" class="cell" data-execution_count="3">
+<div id="3eaba4c9" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1</span>)</span>
@@ -591,7 +592,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <h3 class="anchored" data-anchor-id="random-number-generators">Random number generators</h3>
 <p>If you don’t do anything, numpy will use a generator called the Mersenne Twister (that’s the default in R too).</p>
 <p>However the “default” RNG in numpy is a newer, better algorithm called PCG64.</p>
-<div id="eb9f005a" class="cell" data-execution_count="4">
+<div id="75170a19" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Mersenne twister</span></span>
@@ -602,7 +603,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>array([ 1.62434536, -0.61175641, -0.52817175, -1.07296862,  0.86540763])</code></pre>
 </div>
 </div>
-<div id="4f963bbb" class="cell" data-execution_count="5">
+<div id="5fce4908" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Mersenne twister, selected specifically</span></span>
@@ -614,7 +615,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>array([ 2.04676909, -1.03653009,  0.72997546,  0.41584996, -0.1922969 ])</code></pre>
 </div>
 </div>
-<div id="95e8f3f8" class="cell" data-execution_count="6">
+<div id="d5298c82" class="cell" data-execution_count="6">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 'Default' PCG64</span></span>
@@ -625,7 +626,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>array([ 0.34558419,  0.82161814,  0.33043708, -1.30315723,  0.90535587])</code></pre>
 </div>
 </div>
-<div id="29ccdbcc" class="cell" data-execution_count="7">
+<div id="723f8f01" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(seed <span class="op">=</span> <span class="dv">1</span>)</span>
@@ -645,7 +646,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </section>
 <section id="floating-point-precision" class="level2">
 <h2 class="anchored" data-anchor-id="floating-point-precision">Floating point precision</h2>
-<div id="11fe409d" class="cell" data-execution_count="8">
+<div id="aa78f93d" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.3</span> <span class="op">-</span> <span class="fl">0.2</span> <span class="op">==</span> <span class="fl">0.1</span></span>
@@ -665,7 +666,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <li>4 bytes = 32 bits = single precision</li>
 </ul>
 <p>(GPU libraries often use 4 bytes or even fewer, or a mix of precisions.)</p>
-<div id="eb79516a" class="cell" data-execution_count="9">
+<div id="46c69907" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dg(x, form <span class="op">=</span> <span class="st">'.20f'</span>):</span>
@@ -687,7 +688,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </div>
 <p>How many digits of accuracy do we have?</p>
 <p>Same thing regardless of the size of the number:</p>
-<div id="2047db44" class="cell" data-execution_count="10">
+<div id="7114aa12" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fl">12345678.1234567812345678</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -696,7 +697,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>12345678.123456782</code></pre>
 </div>
 </div>
-<div id="a1d2e130" class="cell" data-execution_count="11">
+<div id="57f346f0" class="cell" data-execution_count="11">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fl">12345678123456781234.5678</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -705,7 +706,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>1.234567812345678e+19</code></pre>
 </div>
 </div>
-<div id="44437ffa" class="cell" data-execution_count="12">
+<div id="473c6aeb" class="cell" data-execution_count="12">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>dg(<span class="fl">12345678123456781234.5678</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -719,7 +720,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <section id="comparisons" class="level3">
 <h3 class="anchored" data-anchor-id="comparisons">Comparisons</h3>
 <p>Let’s see what kinds of numbers we can safely compare for exact equality with <code>==</code>.</p>
-<div id="c4707e8b" class="cell" data-execution_count="13">
+<div id="3c320134" class="cell" data-execution_count="13">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">.5</span> <span class="op">-</span> <span class="fl">.2</span></span>
@@ -741,7 +742,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <section id="calculation-errors" class="level3">
 <h3 class="anchored" data-anchor-id="calculation-errors">Calculation errors</h3>
 <p>Let’s consider accuracy of subtraction.</p>
-<div id="7afa918b" class="cell" data-execution_count="14">
+<div id="cb88c93f" class="cell" data-execution_count="14">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1.1234</span> <span class="op">-</span> <span class="fl">1.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -750,7 +751,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>0.12339999999999995</code></pre>
 </div>
 </div>
-<div id="4f87475b" class="cell" data-execution_count="15">
+<div id="fdb58545" class="cell" data-execution_count="15">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fl">123456781234.1234</span> <span class="op">-</span> <span class="fl">123456781234.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -761,7 +762,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </div>
 <p>This is called catastrophic cancellation.</p>
 <p>Do you think calling it “catastrophic” is too extreme? If so, consider this.</p>
-<div id="218683dd" class="cell" data-execution_count="16">
+<div id="e5b7b3ab" class="cell" data-execution_count="16">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fl">81.0</span> <span class="op">-</span> <span class="fl">80.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -770,7 +771,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <pre><code>1.0</code></pre>
 </div>
 </div>
-<div id="b4774770" class="cell" data-execution_count="17">
+<div id="6cdd1c67" class="cell" data-execution_count="17">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fl">12345678123456781.0</span> <span class="op">-</span><span class="fl">12345678123456780.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -780,7 +781,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </div>
 </div>
 <p>What’s the derivative of <span class="math inline">\(sin(x)\)</span>? Let’s see what kind of accuracy we can get.</p>
-<div id="103d89bb" class="cell" data-execution_count="18">
+<div id="03242f5b" class="cell" data-execution_count="18">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> deriv(f, x, eps<span class="op">=</span><span class="fl">1e-8</span>):</span>
@@ -803,7 +804,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <h3 class="anchored" data-anchor-id="linear-algebra-errors-optional">Linear algebra errors (optional)</h3>
 <p>The errors seen in doing calculations, such as catastrophic cancellation, cascaded through derivative estimation. That also happens when doing linear algebra operations.</p>
 <p>Here’s an example where mathematically all the eigenvalues are real-valued and positive, but not on the computer.</p>
-<div id="fa0f2ba9" class="cell" data-execution_count="19">
+<div id="1df287f3" class="cell" data-execution_count="19">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy <span class="im">as</span> sp</span>
@@ -832,7 +833,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <section id="overflow-and-underflow" class="level3">
 <h3 class="anchored" data-anchor-id="overflow-and-underflow">Overflow and underflow</h3>
 <p>Having a finite number of bits to represent each number means there are minimum and maximum numbers that can be expressed.</p>
-<div id="6c27b39e" class="cell" data-execution_count="20">
+<div id="d4497692" class="cell" data-execution_count="20">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1.38e5000</span></span>
@@ -862,7 +863,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </ul>
 </div>
 </div>
-<div id="7e076208" class="cell" data-execution_count="21">
+<div id="612ffebc" class="cell" data-execution_count="21">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -986,7 +987,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Note that if there were other modules (i.e., Python code files), we could have imported from those as well.</p>
 <p>Now we can use the objects from the package without having to know that it was in a particular module (because of how <code>__init__.py</code> was set up).</p>
-<div id="3715eb3f" class="cell" data-execution_count="22">
+<div id="c604836b" class="cell" data-execution_count="22">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mypkg</span>
@@ -1005,7 +1006,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--user</span> .</span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span>
 <span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> .local/lib/python3.11/site-packages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="e12ee82a" class="cell" data-execution_count="23">
+<div id="c127d90b" class="cell" data-execution_count="23">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mytoy</span>
@@ -1029,7 +1030,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </section>
 <section id="tests-in-a-package" class="level3">
 <h3 class="anchored" data-anchor-id="tests-in-a-package">Tests in a package</h3>
-<p>To set up tests, see the structure of the <code>tests</code> directory of <code>mytoy</code>. You’ll one or more test files with “test” in their filename(s). Having an <code>__init__.py</code> (such as the empty one in <code>mytoy/tests</code>) is not required (as far as I know).</p>
+<p>To set up tests, see the structure of the <code>tests</code> directory of <code>mytoy</code>. You’ll one or more test files with “test” in their filename(s). Having an <code>__init__.py</code> (such as the empty one in <code>mytoy/tests</code>) is not required, though there are cases that we won’t discuss for which it is useful.</p>
 <p>You can then run <code>pytest</code> (in which case <code>pytest</code> will try to find all tests in the current directory and its subdirectories) or <code>pytest mytoy</code> to only run the tests in the <code>mytoy</code> subdirectory.</p>
 </section>
 </section>
@@ -1133,7 +1134,7 @@ x_{t+1}=x_{t}-H_{f}(x_{t})^{-1}\nabla f(x_{t})
 </ul></li>
 </ul>
 <p>Let’s check that <code>numpy</code> got installed into the <code>my_iso_env</code> environment where we expect it to be.</p>
-<div id="dd47f3f6" class="cell" data-execution_count="24">
+<div id="a0a816a1" class="cell" data-execution_count="24">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
@@ -1189,7 +1190,7 @@ Ubuntu 22.04.4 LTS \n \l</code></pre>
 <p>When triggered, GitHub will run the steps in a virtual machine, which is called the <em>runner</em>.</p>
 <section id="joint-demoexercise" class="level3">
 <h3 class="anchored" data-anchor-id="joint-demoexercise">Joint demo/exercise</h3>
-<p>We’ll walk through the steps of setting up automated testing for the <code>mytoy</code> example package. Why do this? It’s common to have testing pass locally on your own machine, but fail for various reasons when done elsewhere.</p>
+<p>We’ll walk through the steps of setting up automated testing for the <code>mytoy</code> example package. Why do this? It’s common to have testing pass locally on your own machine but fail for various reasons when done elsewhere.</p>
 <p>The workflow is specified using a YAML file placed in the <code>.github/workflows</code> directory of the repository.</p>
 <p>Here’s an example YAML file for testing the <code>mytoy</code> package:</p>
 <pre><code>on:
@@ -1220,8 +1221,12 @@ jobs:
         # Another small bug here.
         cd mytoy
         pytest</code></pre>
-<p>We’ll first run this with the current tests for <code>mytoy</code>, which should pass when run via GitHub Actions. We can take a look at <a href="https://github.com/fperez/mytoy/actions">the output</a>.</p>
+<p>We’ll first run this with the current tests for <code>mytoy</code>, which should pass when run via GitHub Actions. We can take a look at <a href="https://github.com/paciorek/mytoy/actions">the output</a>.</p>
 <p>Next, let’s introduce a failing test to see what the output looks like and get a sense for how to debug it.</p>
+</section>
+<section id="exercise-automated-testing-with-your-repository" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-automated-testing-with-your-repository">Exercise: automated testing with your repository</h3>
+<p>Using <code>mytoy</code> as an example, set up automated testing with GitHub Actions in your <code>newton-practice</code> repository. Check that you can find the results under `https://github.com/<username>/newton-practice/actions.</username></p>
 </section>
 </section>
 <section id="example-3-github-actions-for-publishing-webpages" class="level2">
@@ -2256,7 +2261,7 @@ jobs:
 <span id="cb53-599"><a href="#cb53-599" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-600"><a href="#cb53-600" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tests in a package</span></span>
 <span id="cb53-601"><a href="#cb53-601" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-602"><a href="#cb53-602" aria-hidden="true" tabindex="-1"></a>To set up tests, see the structure of the <span class="in">`tests`</span> directory of <span class="in">`mytoy`</span>. You'll one or more test files with "test" in their filename(s). Having an <span class="in">`__init__.py`</span> (such as the empty one in <span class="in">`mytoy/tests`</span>) is not required (as far as I know).</span>
+<span id="cb53-602"><a href="#cb53-602" aria-hidden="true" tabindex="-1"></a>To set up tests, see the structure of the <span class="in">`tests`</span> directory of <span class="in">`mytoy`</span>. You'll one or more test files with "test" in their filename(s). Having an <span class="in">`__init__.py`</span> (such as the empty one in <span class="in">`mytoy/tests`</span>) is not required, though there are cases that we won't discuss for which it is useful.</span>
 <span id="cb53-603"><a href="#cb53-603" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-604"><a href="#cb53-604" aria-hidden="true" tabindex="-1"></a>You can then run <span class="in">`pytest`</span> (in which case <span class="in">`pytest`</span> will try to find all tests</span>
 <span id="cb53-605"><a href="#cb53-605" aria-hidden="true" tabindex="-1"></a>in the current directory and its subdirectories) or <span class="in">`pytest mytoy`</span> to only run the tests in the <span class="in">`mytoy`</span> subdirectory.</span>
@@ -2436,7 +2441,7 @@ jobs:
 <span id="cb53-781"><a href="#cb53-781" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-782"><a href="#cb53-782" aria-hidden="true" tabindex="-1"></a><span class="fu">### Joint demo/exercise</span></span>
 <span id="cb53-783"><a href="#cb53-783" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-784"><a href="#cb53-784" aria-hidden="true" tabindex="-1"></a>We'll walk through the steps of setting up automated testing for the <span class="in">`mytoy`</span> example package. Why do this? It's common to have testing pass locally on your own machine, but fail for various reasons when done elsewhere. </span>
+<span id="cb53-784"><a href="#cb53-784" aria-hidden="true" tabindex="-1"></a>We'll walk through the steps of setting up automated testing for the <span class="in">`mytoy`</span> example package. Why do this? It's common to have testing pass locally on your own machine but fail for various reasons when done elsewhere. </span>
 <span id="cb53-785"><a href="#cb53-785" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-786"><a href="#cb53-786" aria-hidden="true" tabindex="-1"></a>The workflow is specified using a YAML file placed in the <span class="in">`.github/workflows`</span> directory of the repository.</span>
 <span id="cb53-787"><a href="#cb53-787" aria-hidden="true" tabindex="-1"></a></span>
@@ -2474,33 +2479,36 @@ jobs:
 <span id="cb53-819"><a href="#cb53-819" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb53-820"><a href="#cb53-820" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-821"><a href="#cb53-821" aria-hidden="true" tabindex="-1"></a>We'll first run this with the current tests for <span class="in">`mytoy`</span>, which should pass when run via GitHub Actions.</span>
-<span id="cb53-822"><a href="#cb53-822" aria-hidden="true" tabindex="-1"></a>We can take a look at <span class="co">[</span><span class="ot">the output</span><span class="co">](https://github.com/fperez/mytoy/actions)</span>.</span>
+<span id="cb53-822"><a href="#cb53-822" aria-hidden="true" tabindex="-1"></a>We can take a look at <span class="co">[</span><span class="ot">the output</span><span class="co">](https://github.com/paciorek/mytoy/actions)</span>.</span>
 <span id="cb53-823"><a href="#cb53-823" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-824"><a href="#cb53-824" aria-hidden="true" tabindex="-1"></a>Next, let's introduce a failing test to see what the output looks like and get a sense for how to debug it.</span>
 <span id="cb53-825"><a href="#cb53-825" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-826"><a href="#cb53-826" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-826"><a href="#cb53-826" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise: automated testing with your repository</span></span>
 <span id="cb53-827"><a href="#cb53-827" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-828"><a href="#cb53-828" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example 3: GitHub Actions for publishing webpages</span></span>
+<span id="cb53-828"><a href="#cb53-828" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`mytoy`</span> as an example, set up automated testing with GitHub Actions in your <span class="in">`newton-practice`</span> repository. Check that you can find the results under `https://github.com/<span class="dt">&lt;</span><span class="kw">username</span><span class="dt">&gt;</span>/newton-practice/actions.</span>
 <span id="cb53-829"><a href="#cb53-829" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-830"><a href="#cb53-830" aria-hidden="true" tabindex="-1"></a>We can use GitHub Actions with GitHub pages to easily publish websites, where we make changes to the repository and the workflow causes the website to be updated.</span>
-<span id="cb53-831"><a href="#cb53-831" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-832"><a href="#cb53-832" aria-hidden="true" tabindex="-1"></a>Here's the <span class="co">[</span><span class="ot">GitHub Actions workflow (a YAML file)</span><span class="co">](https://github.com/UCB-stat-159-s23/site/blob/main/.github/workflows/book.yml)</span> that publishes the website for the spring 2023 version of Statistics 159/259. Any commits made in the <span class="in">`main`</span> branch cause the website to be updated.</span>
-<span id="cb53-833"><a href="#cb53-833" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-834"><a href="#cb53-834" aria-hidden="true" tabindex="-1"></a><span class="fu">### Configuring GitHub Pages</span></span>
-<span id="cb53-835"><a href="#cb53-835" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-836"><a href="#cb53-836" aria-hidden="true" tabindex="-1"></a>To set up GitHub Pages for a repository, go to <span class="in">`https://github.com/github_org/repository/settings/pages`</span> and select <span class="in">`Source -&gt; Deploy from a branch`</span> and then choose <span class="in">`gh-pages`</span> as the branch (first creating the <span class="in">`gh-pages`</span> branch if necessary). The website should appear at <span class="in">`github_org.github.io/repository`</span>.</span>
-<span id="cb53-837"><a href="#cb53-837" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-838"><a href="#cb53-838" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quarto-based websites</span></span>
-<span id="cb53-839"><a href="#cb53-839" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-840"><a href="#cb53-840" aria-hidden="true" tabindex="-1"></a>In fact the website for this workshop was done using Quarto, which uses GitHub Pages and GitHub Actions behind the scenes.</span>
-<span id="cb53-841"><a href="#cb53-841" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-842"><a href="#cb53-842" aria-hidden="true" tabindex="-1"></a>Chris runs <span class="in">`quarto publish gh-pages`</span> to update the site. Quarto will (on the local machine) render the html (convert the Markdown to html) and then behind the scenes Quarto uses <span class="co">[</span><span class="ot">GitHub Actions</span><span class="co">](https://github.com/berkeley-scf/compute-skills-2026/actions)</span> and <span class="co">[</span><span class="ot">GitHub Pages (via the `gh-pages branch)</span><span class="co">](https://github.com/berkeley-scf/compute-skills-2026/tree/gh-pages)</span> to publish the website.</span>
-<span id="cb53-843"><a href="#cb53-843" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-844"><a href="#cb53-844" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feedback survey</span></span>
-<span id="cb53-845"><a href="#cb53-845" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-846"><a href="#cb53-846" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">UNDER CONSTRUCTION</span><span class="co">]</span></span>
-<span id="cb53-847"><a href="#cb53-847" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-848"><a href="#cb53-848" aria-hidden="true" tabindex="-1"></a>Please fill out this <span class="co">[</span><span class="ot">brief survey</span><span class="co">](https://docs.google.com/forms/d/e/XYZ)</span>.</span>
+<span id="cb53-830"><a href="#cb53-830" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-831"><a href="#cb53-831" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example 3: GitHub Actions for publishing webpages</span></span>
+<span id="cb53-832"><a href="#cb53-832" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-833"><a href="#cb53-833" aria-hidden="true" tabindex="-1"></a>We can use GitHub Actions with GitHub pages to easily publish websites, where we make changes to the repository and the workflow causes the website to be updated.</span>
+<span id="cb53-834"><a href="#cb53-834" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-835"><a href="#cb53-835" aria-hidden="true" tabindex="-1"></a>Here's the <span class="co">[</span><span class="ot">GitHub Actions workflow (a YAML file)</span><span class="co">](https://github.com/UCB-stat-159-s23/site/blob/main/.github/workflows/book.yml)</span> that publishes the website for the spring 2023 version of Statistics 159/259. Any commits made in the <span class="in">`main`</span> branch cause the website to be updated.</span>
+<span id="cb53-836"><a href="#cb53-836" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-837"><a href="#cb53-837" aria-hidden="true" tabindex="-1"></a><span class="fu">### Configuring GitHub Pages</span></span>
+<span id="cb53-838"><a href="#cb53-838" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-839"><a href="#cb53-839" aria-hidden="true" tabindex="-1"></a>To set up GitHub Pages for a repository, go to <span class="in">`https://github.com/github_org/repository/settings/pages`</span> and select <span class="in">`Source -&gt; Deploy from a branch`</span> and then choose <span class="in">`gh-pages`</span> as the branch (first creating the <span class="in">`gh-pages`</span> branch if necessary). The website should appear at <span class="in">`github_org.github.io/repository`</span>.</span>
+<span id="cb53-840"><a href="#cb53-840" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-841"><a href="#cb53-841" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quarto-based websites</span></span>
+<span id="cb53-842"><a href="#cb53-842" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-843"><a href="#cb53-843" aria-hidden="true" tabindex="-1"></a>In fact the website for this workshop was done using Quarto, which uses GitHub Pages and GitHub Actions behind the scenes.</span>
+<span id="cb53-844"><a href="#cb53-844" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-845"><a href="#cb53-845" aria-hidden="true" tabindex="-1"></a>Chris runs <span class="in">`quarto publish gh-pages`</span> to update the site. Quarto will (on the local machine) render the html (convert the Markdown to html) and then behind the scenes Quarto uses <span class="co">[</span><span class="ot">GitHub Actions</span><span class="co">](https://github.com/berkeley-scf/compute-skills-2026/actions)</span> and <span class="co">[</span><span class="ot">GitHub Pages (via the `gh-pages branch)</span><span class="co">](https://github.com/berkeley-scf/compute-skills-2026/tree/gh-pages)</span> to publish the website.</span>
+<span id="cb53-846"><a href="#cb53-846" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-847"><a href="#cb53-847" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feedback survey</span></span>
+<span id="cb53-848"><a href="#cb53-848" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-849"><a href="#cb53-849" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">UNDER CONSTRUCTION</span><span class="co">]</span></span>
+<span id="cb53-850"><a href="#cb53-850" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-851"><a href="#cb53-851" aria-hidden="true" tabindex="-1"></a>Please fill out this <span class="co">[</span><span class="ot">brief survey</span><span class="co">](https://docs.google.com/forms/d/e/XYZ)</span>.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

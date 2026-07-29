@@ -13,7 +13,6 @@ execute:
   freeze: auto
 ---
 
-
 # Background
 This project should give you practice with core Python data structures (particularly dictionaries and lists), navigating complicated data objects, text manipulation, functions, and looping/map operations.
 

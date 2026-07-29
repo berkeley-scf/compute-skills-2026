@@ -21,7 +21,7 @@ execute:
 This module introduces you to some computing concepts and provides a brief tutorial on working on the *command line* (also known as, the *shell*, or the *terminal*).
 :::
 
-{{< include point-to-prep.qmd >}}
+{{< include _point-to-prep.qmd >}}
 
 
 # Parts of a computer

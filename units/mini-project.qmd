@@ -57,7 +57,7 @@ If you'd like to explore the capabilities of AI-assisted coding to carry out an 
 
 6. Write a function, called `remove_punct`, that takes a word and returns the word with all punctuation characters removed, except for those that occur within a word. You'll want to explore the `string` package for useful functionality.
 
-7. Write a function that takes tweet and returns a cleaned up version of the tweet. Here is an example function to get you started:
+7. Write a function that takes tweet and returns a cleaned up version of the tweet, making use of your code from question 6 above. Here is an example function to get you started:
 
    ```{python}
    #| eval: false

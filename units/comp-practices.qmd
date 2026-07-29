@@ -19,7 +19,7 @@ execute:
 This module presents the core content of the workshop on version control (using Git), code style, documentation, and testing.
 :::
 
-{{< include ai.qmd >}}
+{{< include _ai.qmd >}}
 
 # 1. Our running example: Newton's method for optimization
 
@@ -655,7 +655,7 @@ Here are screenshots showing the steps/components of the visual debugger:
 
 :::
 
-If we want to debug into functions defined in files, we can add `breakpoint()` in the location in the file where we want the breakpoint and one should see the code in the `SOURCE` box in the debugger panel. So far, I've found this to be a bit hard to use, but that may well just be my inexperience with the JupyterLab debugger.
+If we want to debug into functions defined in files, we can add `breakpoint()` in the location in the file where we want the breakpoint and one should see the code in the `SOURCE` box in the debugger panel. So far, I haven't gotten this to work with Jupyter, but that may well just be my inexperience with the JupyterLab debugger.
 
   
 ::: {.callout-warning}
@@ -667,7 +667,7 @@ Note that the value of `x_new` doesn't show up automatically in the variables pa
 
 We can use the IPython `%debug` "magic" to activate a debugger as well.
 
-One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke `%debug` and then (re)run the code that is failing. The `ipdb` debugger will be invoked when the error occurs.
+One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke `%debug` and then (re)run the code that is failing. The `ipdb` debugger will be invoked when the error occurs. For this to work, we need to first turn on the Jupyter notebook debugger.
 
 Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):
 

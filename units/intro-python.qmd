@@ -19,9 +19,9 @@ execute:
 This module introduces you to Python, making heavy use of [this Software Carpentry lesson](https://swcarpentry.github.io/python-novice-inflammation){target="_blank"}.
 :::
 
-{{< include point-to-prep.qmd >}}
+{{< include _point-to-prep.qmd >}}
 
-{{< include ai.qmd >}}
+{{< include _ai.qmd >}}
 
 
 # Ways of running Python
@@ -154,6 +154,16 @@ We'll work through the [Visualizing Tabular Data section](https://swcarpentry.gi
 
 Sidenote: For the plots to show in a Jupyter Notebook, it seems that we need all the code for creating a given plot to be in a single cell.
 
+
+::: {.callout-tip }
+## matplotlib objects
+Note that when we made the basic plot in the Software Carpentry material we were (indirectly) interacting with matplotlib objects present in the background, with matplotlib having the concept of the "active" plot (i.e., the current state).
+
+When we made the multi-panel figure we were using an object-oriented interface and directly interacting with the figure (`fig`) and axes (`axes1`, `axes2`, `axes3`) objects. 
+
+:::
+
+
 ::: {.callout-tip}
 ## Exercise
 
@@ -239,6 +249,16 @@ vals_times2 = [val*2 for val in vals]
 vals_times2
 ```
 
+Finally, we can use `map` to iterate as well.
+
+```{python}
+#| eval: true
+vals = [0, 5, 7]
+result = map(lambda x: x**2, vals)  # a lazy iterator
+list(result) # actual result
+```
+
+
 ::: {.callout-tip}
 ## Exercises
 
@@ -277,7 +297,7 @@ We'll skip over testing and documentation as we'll cover those in depth later th
 ::: {.callout-tip}
 ## Exercise 1
 
-Define a function called `sqrt` that will take the square root of a number and will (if requested by the user) set the square root of a negative number to 0.
+Write a function that will count vowels in a character string (i.e., using code from the exercise of the previous section). Allow the user to specify that "y" should count as a vowel.
 
 :::
 
@@ -477,6 +497,11 @@ x[(x > 1) | (x < -0.5)]
 
 np.cos(x)
 ```
+
+::: {.callout-warning}
+One can't use `and` and `or` in vectorized (e.g., numpy) code. Instead we need `&` and `|`.
+:::
+
 
 scipy has even more numerical routines, including working with distributions and additional linear algebra.
 

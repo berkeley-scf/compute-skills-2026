@@ -553,7 +553,7 @@ It would take more work to make the package available in a repository such as Py
 
 ### Tests in a package
 
-To set up tests, see the structure of the `tests` directory of `mytoy`. You'll one or more test files with "test" in their filename(s). Having an `__init__.py` (such as the empty one in `mytoy/tests`) is not required (as far as I know).
+To set up tests, see the structure of the `tests` directory of `mytoy`. You'll one or more test files with "test" in their filename(s). Having an `__init__.py` (such as the empty one in `mytoy/tests`) is not required, though there are cases that we won't discuss for which it is useful.
 
 You can then run `pytest` (in which case `pytest` will try to find all tests
 in the current directory and its subdirectories) or `pytest mytoy` to only run the tests in the `mytoy` subdirectory.
@@ -733,7 +733,7 @@ When triggered, GitHub will run the steps in a virtual machine, which is called 
 
 ### Joint demo/exercise
 
-We'll walk through the steps of setting up automated testing for the `mytoy` example package. Why do this? It's common to have testing pass locally on your own machine, but fail for various reasons when done elsewhere. 
+We'll walk through the steps of setting up automated testing for the `mytoy` example package. Why do this? It's common to have testing pass locally on your own machine but fail for various reasons when done elsewhere. 
 
 The workflow is specified using a YAML file placed in the `.github/workflows` directory of the repository.
 
@@ -771,10 +771,13 @@ jobs:
 ```
 
 We'll first run this with the current tests for `mytoy`, which should pass when run via GitHub Actions.
-We can take a look at [the output](https://github.com/fperez/mytoy/actions).
+We can take a look at [the output](https://github.com/paciorek/mytoy/actions).
 
 Next, let's introduce a failing test to see what the output looks like and get a sense for how to debug it.
 
+### Exercise: automated testing with your repository
+
+Using `mytoy` as an example, set up automated testing with GitHub Actions in your `newton-practice` repository. Check that you can find the results under `https://github.com/<username>/newton-practice/actions.
 
 
 ## Example 3: GitHub Actions for publishing webpages

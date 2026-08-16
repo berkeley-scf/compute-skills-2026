@@ -714,7 +714,7 @@ In some cases an *image* for the container will already be available, and all th
 
 If we're familiar with what happens when Docker containers and Conda environments are set up, we can see in the Binder logs that a Docker container is set up (using Ubuntu Linux) and one of the steps of doing that is to create a Conda environment within the container.
 
-Let's see the steps that are run if we use the `mytoy` repository to start a Binder environment at `ovh.mybinder.org`, specifying `fperez/mytoy` as the repository. (Note that in a number of cases, the startup has failed, probably because `mybinder` has very limited resources for providing cloud compute resources. We are using `ovh.mybinder.org` rather than `mybinder.org` in hopes that is more likely to succeed.
+Let's see the steps that are run if we use the `mytoy` repository to start a Binder environment at `mybinder.org`, specifying `paciorek/mytoy` (forked from `fperez/mytoy`) as the repository. (Note that in a number of cases, the startup has failed, probably because `mybinder` has very limited resources for providing cloud compute resources.)
 
 
 ## Example 2: GitHub Actions for automated testing
@@ -749,16 +749,16 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     # Install dependencies
     - name: Set up Python 
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: 3.12
 
     - name: Install mytoy
-      run: |
+      run: |                          # Assume you are in the directory of the repository.
         # There is a small bug here.
         cd mytoy
         pip install --user .
@@ -773,6 +773,8 @@ jobs:
 We'll first run this with the current tests for `mytoy`, which should pass when run via GitHub Actions.
 We can take a look at [the output](https://github.com/paciorek/mytoy/actions).
 
+As indicated, we need to fix a couple bugs in the workflow, based on looking at the all-important logs from the failing run(s).
+
 Next, let's introduce a failing test to see what the output looks like and get a sense for how to debug it.
 
 ### Exercise: automated testing with your repository
@@ -780,7 +782,29 @@ Next, let's introduce a failing test to see what the output looks like and get a
 Using `mytoy` as an example, set up automated testing with GitHub Actions in your `newton-practice` repository. Check that you can find the results under `https://github.com/<username>/newton-practice/actions.
 
 
-## Example 3: GitHub Actions for publishing webpages
+## Example 3: Using GPUs on the National Research Platform (NRP)
+
+NRP provides a kind of distributed computing cluster that is composed of Linux servers provided by various university researchers around the country, managed by Kubernetes (as is true for DataHub). Many of these servers have GPUs. The computations run in "pods" that run one or more Docker containers.
+
+NRP makes available:
+
+ - a [JupyterHub front end](https://jupyterhub-west.nrp-nautilus.io) for computing on the cluster
+ - running batch (background) computations using Kubernetes configurations/commands
+ - hosted open-source LLMs available for free [via API calls or a chat interface](https://nrp.ai/llms)
+
+We can see the [underlying Docker images used by NRP](https://nrp.ai/documentation/userdocs/running/sci-img/).
+
+Let's try using the NRP JupyterHub and inferring what we can about the underlying environment:
+
+```bash
+cat /etc/issue
+conda list
+nvidia-smi
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+
+## Example 4: GitHub Actions for publishing webpages
 
 We can use GitHub Actions with GitHub pages to easily publish websites, where we make changes to the repository and the workflow causes the website to be updated.
 
@@ -798,6 +822,5 @@ Chris runs `quarto publish gh-pages` to update the site. Quarto will (on the loc
 
 # Feedback survey
 
-[UNDER CONSTRUCTION]
 
-Please fill out this [brief survey](https://docs.google.com/forms/d/e/XYZ).
+Please fill out this [brief survey](https://forms.gle/23fpbJmFzC4BxTmJ8).

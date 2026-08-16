@@ -32,6 +32,7 @@ Standard Library" reference](https://docs.python.org/3/library/index.html), figu
 ```{python}
 pow(-1, 0.5)
 (-1)**0.5
+sqrt(-1)  # fails for negative numbers
 
 import math
 math.exp(1.5)

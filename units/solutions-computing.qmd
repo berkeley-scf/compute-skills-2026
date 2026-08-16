@@ -75,10 +75,10 @@ What happens if you use a single dash with the long form of an option. Are you a
 ## Exercise 4 solution
 
 ```bash
-cp -pr mytoy mytoy_copy             # short form
-cp --recursive -p mytoy mytoy_copy  # long form plus short form
-cp -recursive -p mytoy mytoy_copy   # incorrect long form
-cp -r -e -c -u -r -s -i -v -e -p mytoy mytoy_copy
+cp -pr assets assets_copy             # short form
+cp --recursive -p assets assets_copy  # long form plus short form
+cp -recursive -p assets assets_copy   # incorrect long form
+cp -r -e -c -u -r -s -i -v -e -p assets assets_copy
 ```
 
 :::

@@ -21,9 +21,9 @@ The department will be holding a computational skills workshop the week before c
 
 Please see [this overview](syllabus.html) of topics and goals. The overall goal is that having completed the workshop, students will have a common foundation for their coursework and for PhD students for computation during their thesis work.
 
-All incoming PhD and MA students are expected to attend the workshop, which will be held August 20-21. Those who already have extensive work or other experience with the topics can request to opt out of the workshop [via this form](https://docs.google.com/forms/d/e/1FAIpQLSe2CkIszscnRQlKrICz4ZW3G83J4RPkgIHHhr5YegW-xecAPQ/viewform?usp=dialog) (which will be considered by department faculty), as can PhD students who plan to focus exclusively on theory and feel the computing skills/tools covered in the workshop aren't relevant for them.
+All incoming PhD and MA students are expected to attend the workshop, which will be held August 19-20. Those who already have extensive work or other experience with the topics can request to opt out of the workshop [via this form](https://docs.google.com/forms/d/e/1FAIpQLSe2CkIszscnRQlKrICz4ZW3G83J4RPkgIHHhr5YegW-xecAPQ/viewform?usp=dialog) (which will be considered by department faculty), as can PhD students who plan to focus exclusively on theory and feel the computing skills/tools covered in the workshop aren't relevant for them.
 
-In advance, there will also be an optional introduction to computing concepts and to Python for those students (particularly those taking Statistics 243) to be held August 18-19. If you are interested, please [sign up](https://docs.google.com/forms/d/e/1FAIpQLSe2CkIszscnRQlKrICz4ZW3G83J4RPkgIHHhr5YegW-xecAPQ/viewform?usp=dialog) for the optional introduction.
+In advance, there will also be an optional introduction to computing concepts and to Python for those students (particularly those taking Statistics 243) to be held August 17-18. If you are interested, please [sign up](https://docs.google.com/forms/d/e/1FAIpQLSe2CkIszscnRQlKrICz4ZW3G83J4RPkgIHHhr5YegW-xecAPQ/viewform?usp=dialog) for the optional introduction.
 
 See the [syllabus/overview](syllabus.html) for more details on workshop content.
 

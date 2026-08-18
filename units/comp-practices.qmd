@@ -190,7 +190,7 @@ You can do this with `cp` in the shell as I did above.
 
 If you're learning to use the shell, it's best to practice doing the copying in the shell, but if you really need to, you may be able to drag and move it within the DataHub file manager window pane.
 
-Of if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the "Upload Files" button. 
+Or if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the "Upload Files" button. 
 
 #### Step 3. Edit file(s)
 
@@ -305,7 +305,7 @@ Each commit has:
 
 ![Figure: A Git commit (Credit: ProGit book, CC License)](commit.png "visualization of a git commit")
 
-We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.
+We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important that the hash includes information of the parent node, since this allows us to check the structural consistency of the DAG.
 
 We can illustrate what Git is doing easily in Python.
 
@@ -321,7 +321,7 @@ hash1 = sha1(data1 + meta1).hexdigest( )
 print('Hash:', hash1)
 ```
 ￼
-Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.
+Every small change we make on the previous text will result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.
 
 ```{python}
 data2 = b'Some more text in my paper...'

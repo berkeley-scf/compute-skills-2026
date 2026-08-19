@@ -462,7 +462,7 @@ Warning
 </div>
 </div>
 <p>Once you have your module, you can use it like this:</p>
-<div id="05d20133" class="cell" data-execution_count="1">
+<div id="230192ff" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -565,7 +565,7 @@ Warning
 <p>The key thing is to make sure that you copy the code file into the directory of the new repository.</p>
 <p>You can do this with <code>cp</code> in the shell as I did above.</p>
 <p>If you’re learning to use the shell, it’s best to practice doing the copying in the shell, but if you really need to, you may be able to drag and move it within the DataHub file manager window pane.</p>
-<p>Of if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the “Upload Files” button.</p>
+<p>Or if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the “Upload Files” button.</p>
 </section>
 <section id="step-3.-edit-files" class="level4">
 <h4 class="anchored" data-anchor-id="step-3.-edit-files">Step 3. Edit file(s)</h4>
@@ -724,10 +724,10 @@ Note
 <figcaption>Figure: A Git commit (Credit: ProGit book, CC License)</figcaption>
 </figure>
 </div>
-<p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</p>
+<p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important that the hash includes information of the parent node, since this allows us to check the structural consistency of the DAG.</p>
 <p>We can illustrate what Git is doing easily in Python.</p>
 <p>Let’s create a first hash:</p>
-<div id="2727e1ce" class="cell" data-execution_count="2">
+<div id="b71942d1" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hashlib <span class="im">import</span> sha1</span>
@@ -742,8 +742,8 @@ Note
 <pre><code>Hash: 3b32905baabd5ff22b3832c892078f78f5e5bd3b</code></pre>
 </div>
 </div>
-<p>￼ Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
-<div id="357c0cce" class="cell" data-execution_count="3">
+<p>￼ Every small change we make on the previous text will result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
+<div id="2127f8e7" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> <span class="st">b'Some more text in my paper...'</span></span>
@@ -942,7 +942,7 @@ Note
 <li>Comments should generally be complete sentences.</li>
 </ul></li>
 <li><p>You can use parentheses to group operations such that they can be split up into lines and easily commented, e.g.,</p>
-<div id="2299deef" class="cell" data-execution_count="4">
+<div id="6e92eb40" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> (</span>
@@ -959,7 +959,7 @@ Note
 <li>Non-public methods and variables should have a leading underscore.</li>
 </ul></li>
 <li><p>Try to have the names be informative without being overly long.</p></li>
-<li><p>Don’t overwrite names of objects/functions that already exist in the language. E.g., don’t use <code>len</code> in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</p></li>
+<li><p>Don’t overwrite names of objects/functions that already exist in the language. E.g., don’t use the function name <code>len</code> for your own function in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</p></li>
 <li><p>Use active names for functions (e.g., <code>calc_loglik</code>, <code>calc_log_lik</code> rather than <code>loglik</code> or <code>loglik_calc</code>). Functions are like to verbs in human language.</p></li>
 <li><p>Learn from others’ code.</p></li>
 </ul>
@@ -1007,7 +1007,7 @@ Note
 <section id="using-the-jupyterlab-visual-debugger" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-jupyterlab-visual-debugger">Using the JupyterLab visual debugger</h3>
 <p>Let’s debug my buggy implementation of Newton’s method.</p>
-<div id="a0e3633b" class="cell" data-execution_count="5">
+<div id="fbec4a5a" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -1027,10 +1027,7 @@ Note
 <li>run the next line,</li>
 <li>step (in/down) into a nested function</li>
 <li>step (out/up) out of a function, or</li>
-<li>evaluate an expression
-<ul>
-<li>the output may show up in the notebook, but one can also click on the “log” icon at the bottom and set the “Log Level” to “debug” to see the output in a separate logging pane at the bottom.</li>
-</ul></li>
+<li>evaluate an expression</li>
 </ul></li>
 </ul>
 <p>Here are screenshots showing the steps/components of the visual debugger:</p>
@@ -1050,10 +1047,10 @@ Note
 <p><embed src="shot4a.pdf" title="Control execution" width="800" height="600"></p>
 </div>
 <div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
-<p><embed src="shot5a.pdf" title="Evaluate code in context" width="800" height="600"></p>
+<p><img src="shot7.png" title="Evaluate code in context" width="800" height="600"></p>
 </div>
 <div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
-<p><embed src="shot6a.pdf" title="View result of evaluation" width="800" height="600"></p>
+<p><img src="shot8.png" title="View result of evaluation" width="800" height="600"></p>
 </div>
 </div>
 </div>
@@ -1075,7 +1072,7 @@ Warning
 <section id="using-the-ipython-debugger-ipdb" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-ipython-debugger-ipdb">Using the IPython debugger (<code>ipdb</code>)</h3>
 <p>We can use the IPython <code>%debug</code> “magic” to activate a debugger as well.</p>
-<p>One way this is particularly useful is “post-mortem” debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke <code>%debug</code> and then (re)run the code that is failing. The <code>ipdb</code> debugger will be invoked when the error occurs. For this to work, we need to first turn on the Jupyter notebook debugger.</p>
+<p>One way this is particularly useful is “post-mortem” debugging, i.e., debugging when exceptions (errors) have occurred. We (re)run the code that is failing. Then we run <code>%debug</code> and the <code>ipdb</code> debugger will be invoked at the point of the error. For this to work, we need to first turn on the Jupyter notebook debugger.</p>
 <p>Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):</p>
 <ul>
 <li><code>c</code> to continue execution (until the end or the next breakpoint)</li>
@@ -1833,7 +1830,7 @@ if x &gt; 3:
 <span id="cb30-192"><a href="#cb30-192" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-193"><a href="#cb30-193" aria-hidden="true" tabindex="-1"></a>If you're learning to use the shell, it's best to practice doing the copying in the shell, but if you really need to, you may be able to drag and move it within the DataHub file manager window pane.</span>
 <span id="cb30-194"><a href="#cb30-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-195"><a href="#cb30-195" aria-hidden="true" tabindex="-1"></a>Of if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the "Upload Files" button. </span>
+<span id="cb30-195"><a href="#cb30-195" aria-hidden="true" tabindex="-1"></a>Or if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the "Upload Files" button. </span>
 <span id="cb30-196"><a href="#cb30-196" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-197"><a href="#cb30-197" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Step 3. Edit file(s)</span></span>
 <span id="cb30-198"><a href="#cb30-198" aria-hidden="true" tabindex="-1"></a></span>
@@ -1948,7 +1945,7 @@ if x &gt; 3:
 <span id="cb30-307"><a href="#cb30-307" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-308"><a href="#cb30-308" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure: A Git commit (Credit: ProGit book, CC License)](commit.png "visualization of a git commit")</span></span>
 <span id="cb30-309"><a href="#cb30-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-310"><a href="#cb30-310" aria-hidden="true" tabindex="-1"></a>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</span>
+<span id="cb30-310"><a href="#cb30-310" aria-hidden="true" tabindex="-1"></a>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important that the hash includes information of the parent node, since this allows us to check the structural consistency of the DAG.</span>
 <span id="cb30-311"><a href="#cb30-311" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-312"><a href="#cb30-312" aria-hidden="true" tabindex="-1"></a>We can illustrate what Git is doing easily in Python.</span>
 <span id="cb30-313"><a href="#cb30-313" aria-hidden="true" tabindex="-1"></a></span>
@@ -1964,7 +1961,7 @@ if x &gt; 3:
 <span id="cb30-325"><a href="#cb30-325" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hash:'</span>, hash1)</span>
 <span id="cb30-326"><a href="#cb30-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb30-327"><a href="#cb30-327" aria-hidden="true" tabindex="-1"></a>￼</span>
-<span id="cb30-328"><a href="#cb30-328" aria-hidden="true" tabindex="-1"></a>Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</span>
+<span id="cb30-328"><a href="#cb30-328" aria-hidden="true" tabindex="-1"></a>Every small change we make on the previous text will result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</span>
 <span id="cb30-329"><a href="#cb30-329" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-332"><a href="#cb30-332" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb30-333"><a href="#cb30-333" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> <span class="st">b'Some more text in my paper...'</span></span>
@@ -2187,7 +2184,7 @@ if x &gt; 3:
 <span id="cb30-550"><a href="#cb30-550" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Function, method, and variable names should be snake_case, e.g., <span class="in">`number_of_its`</span> or <span class="in">`n_its`</span>.</span>
 <span id="cb30-551"><a href="#cb30-551" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Non-public methods and variables should have a leading underscore.</span>
 <span id="cb30-552"><a href="#cb30-552" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try to have the names be informative without being overly long.</span>
-<span id="cb30-553"><a href="#cb30-553" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't overwrite names of objects/functions that already exist in the language. E.g., don't use <span class="in">`len`</span> in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</span>
+<span id="cb30-553"><a href="#cb30-553" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't overwrite names of objects/functions that already exist in the language. E.g., don't use the function name <span class="in">`len`</span> for your own function in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</span>
 <span id="cb30-554"><a href="#cb30-554" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use active names for functions (e.g., <span class="in">`calc_loglik`</span>, <span class="in">`calc_log_lik`</span></span>
 <span id="cb30-555"><a href="#cb30-555" aria-hidden="true" tabindex="-1"></a>    rather than <span class="in">`loglik`</span> or <span class="in">`loglik_calc`</span>). Functions are like to verbs in human language.</span>
 <span id="cb30-556"><a href="#cb30-556" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn from others' code.</span>
@@ -2267,34 +2264,34 @@ if x &gt; 3:
 <span id="cb30-632"><a href="#cb30-632" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>step (in/down) into a nested function</span>
 <span id="cb30-633"><a href="#cb30-633" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>step (out/up) out of a function, or</span>
 <span id="cb30-634"><a href="#cb30-634" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>evaluate an expression</span>
-<span id="cb30-635"><a href="#cb30-635" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the output may show up in the notebook, but one can also click on the "log" icon at the bottom and set the "Log Level" to "debug" to see the output in a separate logging pane at the bottom.</span>
-<span id="cb30-636"><a href="#cb30-636" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-637"><a href="#cb30-637" aria-hidden="true" tabindex="-1"></a>Here are screenshots showing the steps/components of the visual debugger:</span>
-<span id="cb30-638"><a href="#cb30-638" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-639"><a href="#cb30-639" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb30-640"><a href="#cb30-640" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access debugger</span></span>
-<span id="cb30-641"><a href="#cb30-641" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-642"><a href="#cb30-642" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot1a.pdf "Access the debugger")</span>{width=800 height=600}</span>
-<span id="cb30-643"><a href="#cb30-643" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-644"><a href="#cb30-644" aria-hidden="true" tabindex="-1"></a><span class="fu">## Start execution</span></span>
-<span id="cb30-645"><a href="#cb30-645" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-646"><a href="#cb30-646" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot2a.pdf "Set a breakpoint and start execution")</span>{width=800 height=600}</span>
-<span id="cb30-647"><a href="#cb30-647" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-648"><a href="#cb30-648" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step into code</span></span>
-<span id="cb30-649"><a href="#cb30-649" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-650"><a href="#cb30-650" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot3a.pdf "Step into a function")</span>{width=800 height=600}</span>
-<span id="cb30-651"><a href="#cb30-651" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-652"><a href="#cb30-652" aria-hidden="true" tabindex="-1"></a><span class="fu">## Control execution</span></span>
-<span id="cb30-653"><a href="#cb30-653" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-654"><a href="#cb30-654" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot4a.pdf "Control execution")</span>{width=800 height=600}</span>
-<span id="cb30-655"><a href="#cb30-655" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-656"><a href="#cb30-656" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluate code</span></span>
+<span id="cb30-635"><a href="#cb30-635" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-636"><a href="#cb30-636" aria-hidden="true" tabindex="-1"></a>Here are screenshots showing the steps/components of the visual debugger:</span>
+<span id="cb30-637"><a href="#cb30-637" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-638"><a href="#cb30-638" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb30-639"><a href="#cb30-639" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access debugger</span></span>
+<span id="cb30-640"><a href="#cb30-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-641"><a href="#cb30-641" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot1a.pdf "Access the debugger")</span>{width=800 height=600}</span>
+<span id="cb30-642"><a href="#cb30-642" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-643"><a href="#cb30-643" aria-hidden="true" tabindex="-1"></a><span class="fu">## Start execution</span></span>
+<span id="cb30-644"><a href="#cb30-644" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-645"><a href="#cb30-645" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot2a.pdf "Set a breakpoint and start execution")</span>{width=800 height=600}</span>
+<span id="cb30-646"><a href="#cb30-646" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-647"><a href="#cb30-647" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step into code</span></span>
+<span id="cb30-648"><a href="#cb30-648" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-649"><a href="#cb30-649" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot3a.pdf "Step into a function")</span>{width=800 height=600}</span>
+<span id="cb30-650"><a href="#cb30-650" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-651"><a href="#cb30-651" aria-hidden="true" tabindex="-1"></a><span class="fu">## Control execution</span></span>
+<span id="cb30-652"><a href="#cb30-652" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-653"><a href="#cb30-653" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot4a.pdf "Control execution")</span>{width=800 height=600}</span>
+<span id="cb30-654"><a href="#cb30-654" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-655"><a href="#cb30-655" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluate code</span></span>
+<span id="cb30-656"><a href="#cb30-656" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-657"><a href="#cb30-657" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-658"><a href="#cb30-658" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot5a.pdf "Evaluate code in context")</span>{width=800 height=600}</span>
+<span id="cb30-658"><a href="#cb30-658" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot7.png "Evaluate code in context")</span>{width=800 height=600}</span>
 <span id="cb30-659"><a href="#cb30-659" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-660"><a href="#cb30-660" aria-hidden="true" tabindex="-1"></a><span class="fu">## View result</span></span>
 <span id="cb30-661"><a href="#cb30-661" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-662"><a href="#cb30-662" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot6a.pdf "View result of evaluation")</span>{width=800 height=600}</span>
+<span id="cb30-662"><a href="#cb30-662" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot8.png "View result of evaluation")</span>{width=800 height=600}</span>
 <span id="cb30-663"><a href="#cb30-663" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-664"><a href="#cb30-664" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-665"><a href="#cb30-665" aria-hidden="true" tabindex="-1"></a></span>
@@ -2310,7 +2307,7 @@ if x &gt; 3:
 <span id="cb30-675"><a href="#cb30-675" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-676"><a href="#cb30-676" aria-hidden="true" tabindex="-1"></a>We can use the IPython <span class="in">`%debug`</span> "magic" to activate a debugger as well.</span>
 <span id="cb30-677"><a href="#cb30-677" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-678"><a href="#cb30-678" aria-hidden="true" tabindex="-1"></a>One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke <span class="in">`%debug`</span> and then (re)run the code that is failing. The <span class="in">`ipdb`</span> debugger will be invoked when the error occurs. For this to work, we need to first turn on the Jupyter notebook debugger.</span>
+<span id="cb30-678"><a href="#cb30-678" aria-hidden="true" tabindex="-1"></a>One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We (re)run the code that is failing. Then we run <span class="in">`%debug`</span> and the <span class="in">`ipdb`</span> debugger will be invoked at the point of the error. For this to work, we need to first turn on the Jupyter notebook debugger.</span>
 <span id="cb30-679"><a href="#cb30-679" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-680"><a href="#cb30-680" aria-hidden="true" tabindex="-1"></a>Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):</span>
 <span id="cb30-681"><a href="#cb30-681" aria-hidden="true" tabindex="-1"></a></span>

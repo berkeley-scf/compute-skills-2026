@@ -544,7 +544,7 @@ Here are a few key suggestions:
     - Function, method, and variable names should be snake_case, e.g., `number_of_its` or `n_its`.
     - Non-public methods and variables should have a leading underscore.
 - Try to have the names be informative without being overly long.
-- Don't overwrite names of objects/functions that already exist in the language. E.g., don't use `len` in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.
+- Don't overwrite names of objects/functions that already exist in the language. E.g., don't use the function name `len` for your own function in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.
 - Use active names for functions (e.g., `calc_loglik`, `calc_log_lik`
     rather than `loglik` or `loglik_calc`). Functions are like to verbs in human language.
 - Learn from others' code.
@@ -624,7 +624,6 @@ We'll work in our Jupyter notebook.
   - step (in/down) into a nested function
   - step (out/up) out of a function, or
   - evaluate an expression
-    - the output may show up in the notebook, but one can also click on the "log" icon at the bottom and set the "Log Level" to "debug" to see the output in a separate logging pane at the bottom.
 
 Here are screenshots showing the steps/components of the visual debugger:
 
@@ -647,11 +646,12 @@ Here are screenshots showing the steps/components of the visual debugger:
 
 ## Evaluate code
 
-![](shot5a.pdf "Evaluate code in context"){width=800 height=600}
+
+![](shot7.png "Evaluate code in context"){width=800 height=600}
 
 ## View result
 
-![](shot6a.pdf "View result of evaluation"){width=800 height=600}
+![](shot8.png "View result of evaluation"){width=800 height=600}
 
 :::
 
@@ -667,7 +667,7 @@ Note that the value of `x_new` doesn't show up automatically in the variables pa
 
 We can use the IPython `%debug` "magic" to activate a debugger as well.
 
-One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We just invoke `%debug` and then (re)run the code that is failing. The `ipdb` debugger will be invoked when the error occurs. For this to work, we need to first turn on the Jupyter notebook debugger.
+One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We (re)run the code that is failing. Then we run `%debug` and the `ipdb` debugger will be invoked at the point of the error. For this to work, we need to first turn on the Jupyter notebook debugger.
 
 Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):
 

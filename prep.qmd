@@ -19,6 +19,8 @@ The exception is that if you already have experience using your laptop with the 
 
 Click [here](https://stat.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-scf%2Fcompute-skills-2026&urlpath=lab%2Ftree%2Fcompute-skills-2026%2F&branch=main){target="_blank"} to access your own machine/server with Python, git, and terminal access on the campus DataHub (also used for various data science, CS, and statistics courses).
 
+Note that in 2026, we are using `stat.datahub.berkeley.edu` not `datahub.berkeley.edu` because of some issues with Git authentication.
+
 :::
 
 ::: {.callout-warning}

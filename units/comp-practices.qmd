@@ -492,6 +492,8 @@ Finally, close the GitHub issue that your partner opened, leaving a brief note t
 Having a (reasonably) consistent and clean style, plus documentation, is important for being able to
 read and maintain your code.
 
+Here are a [couple examples of code](./code_style_examples.pdf) you can look at to think about which version (Code 1 or Code 2) you prefer.
+
 ::: {.callout-tip collapse="true"}
 ## Q: Who is the person most likely to use your code again?
 

@@ -531,15 +531,15 @@ import mytoy
 mytoy.toy(7)
 ```
 
-Let's look in the top directory of the repository. There we see various files related to building and installing the package, namely, `pyproj.toml`, `setup.py`, `setup.cfg`, etc.
+Let's look in the top directory of the repository. There we see various files related to building and installing the package, namely, `pyproj.toml`.
 
 In fact, one can install the package with only
 either `setup.py` or `pyproj.toml`, but the other files listed here are recommended:
 
 - `pyproj.toml` (or `pyproject.toml`): this is a configuration file used by packaging tools. In the `mytoy` example it specifies to use `setuptools` to build and install the package.
-- `setup.py`: this is run when the package is built and installed when using `setuptools`. In the example, it simply runs `setuptools.setup()`. With recent versions of
+- `setup.py` (optional): this is run when the package is built and installed when using `setuptools`. With recent versions of
 `setuptools`, you don't actually need this so long as you have the `pyproj.toml` file.
-- `setup.cfg`: provides metadata about the package when using `setuptools`.
+- `setup.cfg` (optional): provides metadata about the package when using `setuptools`.
 - `environment.yml`: provides information about the full environment in which your package should be used (including examples, documentation, etc.). For projects using `setuptools`, a minimal list of dependencies needed for installation and use of the package can instead be included in the `install_requires` option of `setup.cfg`.
 - `LICENSE`: specifies the license for your package giving the terms under which others can use it.
 

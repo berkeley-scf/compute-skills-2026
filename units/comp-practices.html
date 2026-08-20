@@ -462,7 +462,7 @@ Warning
 </div>
 </div>
 <p>Once you have your module, you can use it like this:</p>
-<div id="c711cba3" class="cell" data-execution_count="1">
+<div id="9708ae70" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -728,7 +728,7 @@ Note
 <p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important that the hash includes information of the parent node, since this allows us to check the structural consistency of the DAG.</p>
 <p>We can illustrate what Git is doing easily in Python.</p>
 <p>Let’s create a first hash:</p>
-<div id="ce65e210" class="cell" data-execution_count="2">
+<div id="e2ec5c59" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hashlib <span class="im">import</span> sha1</span>
@@ -744,7 +744,7 @@ Note
 </div>
 </div>
 <p>￼ Every small change we make on the previous text will result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
-<div id="41c095ea" class="cell" data-execution_count="3">
+<div id="1d2789e2" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> <span class="st">b'Some more text in my paper...'</span></span>
@@ -895,6 +895,7 @@ Note
 <section id="code-style-and-documentation" class="level1">
 <h1>4. Code style and documentation</h1>
 <p>Having a (reasonably) consistent and clean style, plus documentation, is important for being able to read and maintain your code.</p>
+<p>Here are a <a href="./code_style_examples.pdf">couple examples of code</a> you can look at to think about which version (Code 1 or Code 2) you prefer.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -943,7 +944,7 @@ Note
 <li>Comments should generally be complete sentences.</li>
 </ul></li>
 <li><p>You can use parentheses to group operations such that they can be split up into lines and easily commented, e.g.,</p>
-<div id="88332496" class="cell" data-execution_count="4">
+<div id="0ad50293" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> (</span>
@@ -1008,7 +1009,7 @@ Note
 <section id="using-the-jupyterlab-visual-debugger" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-jupyterlab-visual-debugger">Using the JupyterLab visual debugger</h3>
 <p>Let’s debug my buggy implementation of Newton’s method.</p>
-<div id="3be6b2a3" class="cell" data-execution_count="5">
+<div id="451c79d8" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -2133,296 +2134,298 @@ if x &gt; 3:
 <span id="cb30-498"><a href="#cb30-498" aria-hidden="true" tabindex="-1"></a>Having a (reasonably) consistent and clean style, plus documentation, is important for being able to</span>
 <span id="cb30-499"><a href="#cb30-499" aria-hidden="true" tabindex="-1"></a>read and maintain your code.</span>
 <span id="cb30-500"><a href="#cb30-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-501"><a href="#cb30-501" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip collapse="true"}</span>
-<span id="cb30-502"><a href="#cb30-502" aria-hidden="true" tabindex="-1"></a><span class="fu">## Q: Who is the person most likely to use your code again?</span></span>
-<span id="cb30-503"><a href="#cb30-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-504"><a href="#cb30-504" aria-hidden="true" tabindex="-1"></a>A: You, but at some point in the future by which you will have forgotten what the code does and why.</span>
+<span id="cb30-501"><a href="#cb30-501" aria-hidden="true" tabindex="-1"></a>Here are a <span class="co">[</span><span class="ot">couple examples of code</span><span class="co">](./code_style_examples.pdf)</span> you can look at to think about which version (Code 1 or Code 2) you prefer.</span>
+<span id="cb30-502"><a href="#cb30-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-503"><a href="#cb30-503" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip collapse="true"}</span>
+<span id="cb30-504"><a href="#cb30-504" aria-hidden="true" tabindex="-1"></a><span class="fu">## Q: Who is the person most likely to use your code again?</span></span>
 <span id="cb30-505"><a href="#cb30-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-506"><a href="#cb30-506" aria-hidden="true" tabindex="-1"></a>I can't tell you how many times I've looked back at my</span>
-<span id="cb30-507"><a href="#cb30-507" aria-hidden="true" tabindex="-1"></a>own code and been amazed at how little I remember and frustrated with the former self who wrote it.</span>
-<span id="cb30-508"><a href="#cb30-508" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-509"><a href="#cb30-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-510"><a href="#cb30-510" aria-hidden="true" tabindex="-1"></a>A go-to reference on Python code style is the <span class="co">[</span><span class="ot">PEP8 style guide</span><span class="co">](https://peps.python.org/pep-0008)</span>. That said, it's extensive, quite detailed, and hard to absorb quickly.</span>
+<span id="cb30-506"><a href="#cb30-506" aria-hidden="true" tabindex="-1"></a>A: You, but at some point in the future by which you will have forgotten what the code does and why.</span>
+<span id="cb30-507"><a href="#cb30-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-508"><a href="#cb30-508" aria-hidden="true" tabindex="-1"></a>I can't tell you how many times I've looked back at my</span>
+<span id="cb30-509"><a href="#cb30-509" aria-hidden="true" tabindex="-1"></a>own code and been amazed at how little I remember and frustrated with the former self who wrote it.</span>
+<span id="cb30-510"><a href="#cb30-510" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-511"><a href="#cb30-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-512"><a href="#cb30-512" aria-hidden="true" tabindex="-1"></a>Here are a few key suggestions:</span>
+<span id="cb30-512"><a href="#cb30-512" aria-hidden="true" tabindex="-1"></a>A go-to reference on Python code style is the <span class="co">[</span><span class="ot">PEP8 style guide</span><span class="co">](https://peps.python.org/pep-0008)</span>. That said, it's extensive, quite detailed, and hard to absorb quickly.</span>
 <span id="cb30-513"><a href="#cb30-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-514"><a href="#cb30-514" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Indentation:</span>
-<span id="cb30-515"><a href="#cb30-515" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Python is strict about indentation of course.</span>
-<span id="cb30-516"><a href="#cb30-516" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Use 4 spaces per indentation level (avoid tabs if possible).</span>
-<span id="cb30-517"><a href="#cb30-517" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whitespace: use it in a variety of places. Some places where it is good to have it</span>
-<span id="cb30-518"><a href="#cb30-518" aria-hidden="true" tabindex="-1"></a>    are</span>
-<span id="cb30-519"><a href="#cb30-519" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>around operators (assignment and arithmetic), e.g., <span class="in">`x = x * 3`</span>;</span>
-<span id="cb30-520"><a href="#cb30-520" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>between function arguments, e.g., <span class="in">`myfun(x, 3, data)`</span>;</span>
-<span id="cb30-521"><a href="#cb30-521" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>between list/tuple elements, e.g., <span class="in">`x = [3, 5, 7]`</span>; and</span>
-<span id="cb30-522"><a href="#cb30-522" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>between matrix/array indices, e.g., <span class="in">`x[3, :4]`</span>.</span>
-<span id="cb30-523"><a href="#cb30-523" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use blank lines to separate blocks of code with comments to say what</span>
-<span id="cb30-524"><a href="#cb30-524" aria-hidden="true" tabindex="-1"></a>    the block does.</span>
-<span id="cb30-525"><a href="#cb30-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use whitespaces or parentheses for clarity even if not needed for order of</span>
-<span id="cb30-526"><a href="#cb30-526" aria-hidden="true" tabindex="-1"></a>    operations. For example, <span class="in">`a/y*x`</span> will work but is not easy to read</span>
-<span id="cb30-527"><a href="#cb30-527" aria-hidden="true" tabindex="-1"></a>    and you can easily induce a bug if you forget the order of ops. Instead,</span>
-<span id="cb30-528"><a href="#cb30-528" aria-hidden="true" tabindex="-1"></a>    use <span class="in">`a/y * x`</span> or <span class="in">`(a/y) * x`</span>.</span>
-<span id="cb30-529"><a href="#cb30-529" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Avoid code lines longer than 79 characters and comment/docstring lines</span>
-<span id="cb30-530"><a href="#cb30-530" aria-hidden="true" tabindex="-1"></a>    longer than 72 characters.</span>
-<span id="cb30-531"><a href="#cb30-531" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Comments:</span>
-<span id="cb30-532"><a href="#cb30-532" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Add comments to explain *why*, not *how*.</span>
-<span id="cb30-533"><a href="#cb30-533" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Don't restate the obvious; avoid things like <span class="in">`x = x + 1  # Increment x.`</span>.</span>
-<span id="cb30-534"><a href="#cb30-534" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Some key things to document:</span>
-<span id="cb30-535"><a href="#cb30-535" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>summarizing a block of code,</span>
-<span id="cb30-536"><a href="#cb30-536" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>explaining a complicated piece of code or particular construction, and</span>
-<span id="cb30-537"><a href="#cb30-537" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>explaining non-obvious values or steps, such as <span class="in">`x = x + 1 # Compensate for image border.`</span></span>
-<span id="cb30-538"><a href="#cb30-538" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Comments should generally be complete sentences.</span>
-<span id="cb30-539"><a href="#cb30-539" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can use parentheses to group operations such that they can be split up into lines</span>
-<span id="cb30-540"><a href="#cb30-540" aria-hidden="true" tabindex="-1"></a>  and easily commented, e.g.,</span>
-<span id="cb30-541"><a href="#cb30-541" aria-hidden="true" tabindex="-1"></a>  <span class="in">```{python}</span></span>
-<span id="cb30-542"><a href="#cb30-542" aria-hidden="true" tabindex="-1"></a>  <span class="co">#| eval: false</span></span>
-<span id="cb30-543"><a href="#cb30-543" aria-hidden="true" tabindex="-1"></a>  newdf <span class="op">=</span> (</span>
-<span id="cb30-544"><a href="#cb30-544" aria-hidden="true" tabindex="-1"></a>          pd.read_csv(<span class="st">'file.csv'</span>)                   <span class="co"># 1988 census data.</span></span>
-<span id="cb30-545"><a href="#cb30-545" aria-hidden="true" tabindex="-1"></a>          .rename(columns <span class="op">=</span> {<span class="st">'STATE'</span>: <span class="st">'us_state'</span>})  <span class="co"># Adjust column names.</span></span>
-<span id="cb30-546"><a href="#cb30-546" aria-hidden="true" tabindex="-1"></a>          .dropna()                                 <span class="co"># Remove rows with missing values.</span></span>
-<span id="cb30-547"><a href="#cb30-547" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb30-548"><a href="#cb30-548" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
-<span id="cb30-549"><a href="#cb30-549" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Being consistent about the naming style for objects and functions is hard, but try to be consistent. PEP8 suggests:</span>
-<span id="cb30-550"><a href="#cb30-550" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Class names should be UpperCamelCase.</span>
-<span id="cb30-551"><a href="#cb30-551" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Function, method, and variable names should be snake_case, e.g., <span class="in">`number_of_its`</span> or <span class="in">`n_its`</span>.</span>
-<span id="cb30-552"><a href="#cb30-552" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Non-public methods and variables should have a leading underscore.</span>
-<span id="cb30-553"><a href="#cb30-553" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try to have the names be informative without being overly long.</span>
-<span id="cb30-554"><a href="#cb30-554" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't overwrite names of objects/functions that already exist in the language. E.g., don't use the function name <span class="in">`len`</span> for your own function in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</span>
-<span id="cb30-555"><a href="#cb30-555" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use active names for functions (e.g., <span class="in">`calc_loglik`</span>, <span class="in">`calc_log_lik`</span></span>
-<span id="cb30-556"><a href="#cb30-556" aria-hidden="true" tabindex="-1"></a>    rather than <span class="in">`loglik`</span> or <span class="in">`loglik_calc`</span>). Functions are like to verbs in human language.</span>
-<span id="cb30-557"><a href="#cb30-557" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn from others' code.</span>
-<span id="cb30-558"><a href="#cb30-558" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-559"><a href="#cb30-559" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linting</span></span>
+<span id="cb30-514"><a href="#cb30-514" aria-hidden="true" tabindex="-1"></a>Here are a few key suggestions:</span>
+<span id="cb30-515"><a href="#cb30-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-516"><a href="#cb30-516" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Indentation:</span>
+<span id="cb30-517"><a href="#cb30-517" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Python is strict about indentation of course.</span>
+<span id="cb30-518"><a href="#cb30-518" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Use 4 spaces per indentation level (avoid tabs if possible).</span>
+<span id="cb30-519"><a href="#cb30-519" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Whitespace: use it in a variety of places. Some places where it is good to have it</span>
+<span id="cb30-520"><a href="#cb30-520" aria-hidden="true" tabindex="-1"></a>    are</span>
+<span id="cb30-521"><a href="#cb30-521" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>around operators (assignment and arithmetic), e.g., <span class="in">`x = x * 3`</span>;</span>
+<span id="cb30-522"><a href="#cb30-522" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>between function arguments, e.g., <span class="in">`myfun(x, 3, data)`</span>;</span>
+<span id="cb30-523"><a href="#cb30-523" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>between list/tuple elements, e.g., <span class="in">`x = [3, 5, 7]`</span>; and</span>
+<span id="cb30-524"><a href="#cb30-524" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>between matrix/array indices, e.g., <span class="in">`x[3, :4]`</span>.</span>
+<span id="cb30-525"><a href="#cb30-525" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use blank lines to separate blocks of code with comments to say what</span>
+<span id="cb30-526"><a href="#cb30-526" aria-hidden="true" tabindex="-1"></a>    the block does.</span>
+<span id="cb30-527"><a href="#cb30-527" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use whitespaces or parentheses for clarity even if not needed for order of</span>
+<span id="cb30-528"><a href="#cb30-528" aria-hidden="true" tabindex="-1"></a>    operations. For example, <span class="in">`a/y*x`</span> will work but is not easy to read</span>
+<span id="cb30-529"><a href="#cb30-529" aria-hidden="true" tabindex="-1"></a>    and you can easily induce a bug if you forget the order of ops. Instead,</span>
+<span id="cb30-530"><a href="#cb30-530" aria-hidden="true" tabindex="-1"></a>    use <span class="in">`a/y * x`</span> or <span class="in">`(a/y) * x`</span>.</span>
+<span id="cb30-531"><a href="#cb30-531" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Avoid code lines longer than 79 characters and comment/docstring lines</span>
+<span id="cb30-532"><a href="#cb30-532" aria-hidden="true" tabindex="-1"></a>    longer than 72 characters.</span>
+<span id="cb30-533"><a href="#cb30-533" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Comments:</span>
+<span id="cb30-534"><a href="#cb30-534" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Add comments to explain *why*, not *how*.</span>
+<span id="cb30-535"><a href="#cb30-535" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Don't restate the obvious; avoid things like <span class="in">`x = x + 1  # Increment x.`</span>.</span>
+<span id="cb30-536"><a href="#cb30-536" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Some key things to document:</span>
+<span id="cb30-537"><a href="#cb30-537" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>summarizing a block of code,</span>
+<span id="cb30-538"><a href="#cb30-538" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>explaining a complicated piece of code or particular construction, and</span>
+<span id="cb30-539"><a href="#cb30-539" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>explaining non-obvious values or steps, such as <span class="in">`x = x + 1 # Compensate for image border.`</span></span>
+<span id="cb30-540"><a href="#cb30-540" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Comments should generally be complete sentences.</span>
+<span id="cb30-541"><a href="#cb30-541" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You can use parentheses to group operations such that they can be split up into lines</span>
+<span id="cb30-542"><a href="#cb30-542" aria-hidden="true" tabindex="-1"></a>  and easily commented, e.g.,</span>
+<span id="cb30-543"><a href="#cb30-543" aria-hidden="true" tabindex="-1"></a>  <span class="in">```{python}</span></span>
+<span id="cb30-544"><a href="#cb30-544" aria-hidden="true" tabindex="-1"></a>  <span class="co">#| eval: false</span></span>
+<span id="cb30-545"><a href="#cb30-545" aria-hidden="true" tabindex="-1"></a>  newdf <span class="op">=</span> (</span>
+<span id="cb30-546"><a href="#cb30-546" aria-hidden="true" tabindex="-1"></a>          pd.read_csv(<span class="st">'file.csv'</span>)                   <span class="co"># 1988 census data.</span></span>
+<span id="cb30-547"><a href="#cb30-547" aria-hidden="true" tabindex="-1"></a>          .rename(columns <span class="op">=</span> {<span class="st">'STATE'</span>: <span class="st">'us_state'</span>})  <span class="co"># Adjust column names.</span></span>
+<span id="cb30-548"><a href="#cb30-548" aria-hidden="true" tabindex="-1"></a>          .dropna()                                 <span class="co"># Remove rows with missing values.</span></span>
+<span id="cb30-549"><a href="#cb30-549" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb30-550"><a href="#cb30-550" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
+<span id="cb30-551"><a href="#cb30-551" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Being consistent about the naming style for objects and functions is hard, but try to be consistent. PEP8 suggests:</span>
+<span id="cb30-552"><a href="#cb30-552" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Class names should be UpperCamelCase.</span>
+<span id="cb30-553"><a href="#cb30-553" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Function, method, and variable names should be snake_case, e.g., <span class="in">`number_of_its`</span> or <span class="in">`n_its`</span>.</span>
+<span id="cb30-554"><a href="#cb30-554" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Non-public methods and variables should have a leading underscore.</span>
+<span id="cb30-555"><a href="#cb30-555" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try to have the names be informative without being overly long.</span>
+<span id="cb30-556"><a href="#cb30-556" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't overwrite names of objects/functions that already exist in the language. E.g., don't use the function name <span class="in">`len`</span> for your own function in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</span>
+<span id="cb30-557"><a href="#cb30-557" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use active names for functions (e.g., <span class="in">`calc_loglik`</span>, <span class="in">`calc_log_lik`</span></span>
+<span id="cb30-558"><a href="#cb30-558" aria-hidden="true" tabindex="-1"></a>    rather than <span class="in">`loglik`</span> or <span class="in">`loglik_calc`</span>). Functions are like to verbs in human language.</span>
+<span id="cb30-559"><a href="#cb30-559" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn from others' code.</span>
 <span id="cb30-560"><a href="#cb30-560" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-561"><a href="#cb30-561" aria-hidden="true" tabindex="-1"></a>Linting is the process of applying a tool to your code to enforce style.</span>
+<span id="cb30-561"><a href="#cb30-561" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linting</span></span>
 <span id="cb30-562"><a href="#cb30-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-563"><a href="#cb30-563" aria-hidden="true" tabindex="-1"></a>We'll demo using <span class="in">`ruff`</span> to some example code. You might also consider <span class="in">`black`</span>.</span>
+<span id="cb30-563"><a href="#cb30-563" aria-hidden="true" tabindex="-1"></a>Linting is the process of applying a tool to your code to enforce style.</span>
 <span id="cb30-564"><a href="#cb30-564" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-565"><a href="#cb30-565" aria-hidden="true" tabindex="-1"></a>We'll practice with <span class="in">`ruff`</span> with a small module we'll use next also for debugging.</span>
+<span id="cb30-565"><a href="#cb30-565" aria-hidden="true" tabindex="-1"></a>We'll demo using <span class="in">`ruff`</span> to some example code. You might also consider <span class="in">`black`</span>.</span>
 <span id="cb30-566"><a href="#cb30-566" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-567"><a href="#cb30-567" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First, we check for and fix syntax errors.</span>
-<span id="cb30-568"><a href="#cb30-568" aria-hidden="true" tabindex="-1"></a>  <span class="in">```bash</span></span>
-<span id="cb30-569"><a href="#cb30-569" aria-hidden="true" tabindex="-1"></a>  <span class="ex">ruff</span> check newton.py</span>
-<span id="cb30-570"><a href="#cb30-570" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
-<span id="cb30-571"><a href="#cb30-571" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Then we ask <span class="in">`ruff`</span> to reformat to conform to standard style.</span>
-<span id="cb30-572"><a href="#cb30-572" aria-hidden="true" tabindex="-1"></a>  <span class="in">```bash</span></span>
-<span id="cb30-573"><a href="#cb30-573" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cp</span> newton.py newton-save.py   <span class="co"># So we can see what `ruff` did.</span></span>
-<span id="cb30-574"><a href="#cb30-574" aria-hidden="true" tabindex="-1"></a>  <span class="ex">ruff</span> format newton.py</span>
-<span id="cb30-575"><a href="#cb30-575" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
-<span id="cb30-576"><a href="#cb30-576" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-577"><a href="#cb30-577" aria-hidden="true" tabindex="-1"></a>Let's see what changed:</span>
+<span id="cb30-567"><a href="#cb30-567" aria-hidden="true" tabindex="-1"></a>We'll practice with <span class="in">`ruff`</span> with a small module we'll use next also for debugging.</span>
+<span id="cb30-568"><a href="#cb30-568" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-569"><a href="#cb30-569" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First, we check for and fix syntax errors.</span>
+<span id="cb30-570"><a href="#cb30-570" aria-hidden="true" tabindex="-1"></a>  <span class="in">```bash</span></span>
+<span id="cb30-571"><a href="#cb30-571" aria-hidden="true" tabindex="-1"></a>  <span class="ex">ruff</span> check newton.py</span>
+<span id="cb30-572"><a href="#cb30-572" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
+<span id="cb30-573"><a href="#cb30-573" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Then we ask <span class="in">`ruff`</span> to reformat to conform to standard style.</span>
+<span id="cb30-574"><a href="#cb30-574" aria-hidden="true" tabindex="-1"></a>  <span class="in">```bash</span></span>
+<span id="cb30-575"><a href="#cb30-575" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cp</span> newton.py newton-save.py   <span class="co"># So we can see what `ruff` did.</span></span>
+<span id="cb30-576"><a href="#cb30-576" aria-hidden="true" tabindex="-1"></a>  <span class="ex">ruff</span> format newton.py</span>
+<span id="cb30-577"><a href="#cb30-577" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
 <span id="cb30-578"><a href="#cb30-578" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-579"><a href="#cb30-579" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb30-580"><a href="#cb30-580" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> newton-save.py newton.py</span>
-<span id="cb30-581"><a href="#cb30-581" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-582"><a href="#cb30-582" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-583"><a href="#cb30-583" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: add documentation and comments to your Newton module</span></span>
+<span id="cb30-579"><a href="#cb30-579" aria-hidden="true" tabindex="-1"></a>Let's see what changed:</span>
+<span id="cb30-580"><a href="#cb30-580" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-581"><a href="#cb30-581" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb30-582"><a href="#cb30-582" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> newton-save.py newton.py</span>
+<span id="cb30-583"><a href="#cb30-583" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb30-584"><a href="#cb30-584" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-585"><a href="#cb30-585" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Add a <span class="co">[</span><span class="ot">doc string</span><span class="co">](https://peps.python.org/pep-0257)</span> to each of your functions. Focus on your main function. Take a look at an example, such as <span class="in">`help(numpy.linalg.cholesky)`</span> to see the different parts and the format. Docstrings are also a good thing to ask an AI coding tool to help with.</span>
-<span id="cb30-586"><a href="#cb30-586" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`help(optimize)`</span> to check that your documentation shows up.</span>
-<span id="cb30-587"><a href="#cb30-587" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Consider whether to add comments to your code.</span>
-<span id="cb30-588"><a href="#cb30-588" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Apply <span class="in">`ruff`</span> to your code.</span>
-<span id="cb30-589"><a href="#cb30-589" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Compare the results with the style suggestions above and do additional reformatting as needed.</span>
-<span id="cb30-590"><a href="#cb30-590" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Commit and push to GitHub. Remember to have a good commit message!</span>
-<span id="cb30-591"><a href="#cb30-591" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-592"><a href="#cb30-592" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Debugging</span></span>
+<span id="cb30-585"><a href="#cb30-585" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: add documentation and comments to your Newton module</span></span>
+<span id="cb30-586"><a href="#cb30-586" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-587"><a href="#cb30-587" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Add a <span class="co">[</span><span class="ot">doc string</span><span class="co">](https://peps.python.org/pep-0257)</span> to each of your functions. Focus on your main function. Take a look at an example, such as <span class="in">`help(numpy.linalg.cholesky)`</span> to see the different parts and the format. Docstrings are also a good thing to ask an AI coding tool to help with.</span>
+<span id="cb30-588"><a href="#cb30-588" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`help(optimize)`</span> to check that your documentation shows up.</span>
+<span id="cb30-589"><a href="#cb30-589" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Consider whether to add comments to your code.</span>
+<span id="cb30-590"><a href="#cb30-590" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Apply <span class="in">`ruff`</span> to your code.</span>
+<span id="cb30-591"><a href="#cb30-591" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Compare the results with the style suggestions above and do additional reformatting as needed.</span>
+<span id="cb30-592"><a href="#cb30-592" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Commit and push to GitHub. Remember to have a good commit message!</span>
 <span id="cb30-593"><a href="#cb30-593" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-594"><a href="#cb30-594" aria-hidden="true" tabindex="-1"></a>Once you start writing more complicated code, even in an interpreted language such as Python that you can run line-by-line, you'll want to use a debugger, particularly when you have nested function calls.</span>
+<span id="cb30-594"><a href="#cb30-594" aria-hidden="true" tabindex="-1"></a><span class="fu"># 5. Debugging</span></span>
 <span id="cb30-595"><a href="#cb30-595" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-596"><a href="#cb30-596" aria-hidden="true" tabindex="-1"></a>Debugging can be a slow process, so you typically start a debugging session by deciding which line in your code you would like to start tracing the behavior from, and you place a *breakpoint*. Then you can have the debugger run the program up to that point and stop at it, allowing you to:</span>
+<span id="cb30-596"><a href="#cb30-596" aria-hidden="true" tabindex="-1"></a>Once you start writing more complicated code, even in an interpreted language such as Python that you can run line-by-line, you'll want to use a debugger, particularly when you have nested function calls.</span>
 <span id="cb30-597"><a href="#cb30-597" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-598"><a href="#cb30-598" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>inspect the current state of variables,</span>
-<span id="cb30-599"><a href="#cb30-599" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>step through the code line by line,</span>
-<span id="cb30-600"><a href="#cb30-600" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>step over or into functions as they are called, and</span>
-<span id="cb30-601"><a href="#cb30-601" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>resume program execution.</span>
-<span id="cb30-602"><a href="#cb30-602" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-603"><a href="#cb30-603" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-604"><a href="#cb30-604" aria-hidden="true" tabindex="-1"></a>The *stack* is the series of nested function calls. When an error occurs, Python will print the *stack trace* showing the sequence of calls leading to the error. This can be helpful and distracting/confusing.</span>
+<span id="cb30-598"><a href="#cb30-598" aria-hidden="true" tabindex="-1"></a>Debugging can be a slow process, so you typically start a debugging session by deciding which line in your code you would like to start tracing the behavior from, and you place a *breakpoint*. Then you can have the debugger run the program up to that point and stop at it, allowing you to:</span>
+<span id="cb30-599"><a href="#cb30-599" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-600"><a href="#cb30-600" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>inspect the current state of variables,</span>
+<span id="cb30-601"><a href="#cb30-601" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>step through the code line by line,</span>
+<span id="cb30-602"><a href="#cb30-602" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>step over or into functions as they are called, and</span>
+<span id="cb30-603"><a href="#cb30-603" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>resume program execution.</span>
+<span id="cb30-604"><a href="#cb30-604" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-605"><a href="#cb30-605" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-606"><a href="#cb30-606" aria-hidden="true" tabindex="-1"></a>We'll use the debugger in JupyterLab; similar functionality is in VS Code. And you can use <span class="in">`pdb`</span> directly from the command line; the ideas are all the same.</span>
+<span id="cb30-606"><a href="#cb30-606" aria-hidden="true" tabindex="-1"></a>The *stack* is the series of nested function calls. When an error occurs, Python will print the *stack trace* showing the sequence of calls leading to the error. This can be helpful and distracting/confusing.</span>
 <span id="cb30-607"><a href="#cb30-607" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-608"><a href="#cb30-608" aria-hidden="true" tabindex="-1"></a><span class="fu">## Demo: debugging my Newton implementation</span></span>
+<span id="cb30-608"><a href="#cb30-608" aria-hidden="true" tabindex="-1"></a>We'll use the debugger in JupyterLab; similar functionality is in VS Code. And you can use <span class="in">`pdb`</span> directly from the command line; the ideas are all the same.</span>
 <span id="cb30-609"><a href="#cb30-609" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-610"><a href="#cb30-610" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using the JupyterLab visual debugger</span></span>
+<span id="cb30-610"><a href="#cb30-610" aria-hidden="true" tabindex="-1"></a><span class="fu">## Demo: debugging my Newton implementation</span></span>
 <span id="cb30-611"><a href="#cb30-611" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-612"><a href="#cb30-612" aria-hidden="true" tabindex="-1"></a>Let's debug my buggy implementation of Newton's method.</span>
+<span id="cb30-612"><a href="#cb30-612" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using the JupyterLab visual debugger</span></span>
 <span id="cb30-613"><a href="#cb30-613" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-616"><a href="#cb30-616" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb30-617"><a href="#cb30-617" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb30-618"><a href="#cb30-618" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
-<span id="cb30-619"><a href="#cb30-619" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb30-620"><a href="#cb30-620" aria-hidden="true" tabindex="-1"></a>newton.optimize(<span class="fl">2.95</span>, np.cos)</span>
-<span id="cb30-621"><a href="#cb30-621" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-622"><a href="#cb30-622" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-623"><a href="#cb30-623" aria-hidden="true" tabindex="-1"></a>Clearly that doesn't work. Let's debug it.</span>
+<span id="cb30-614"><a href="#cb30-614" aria-hidden="true" tabindex="-1"></a>Let's debug my buggy implementation of Newton's method.</span>
+<span id="cb30-615"><a href="#cb30-615" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-618"><a href="#cb30-618" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb30-619"><a href="#cb30-619" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb30-620"><a href="#cb30-620" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
+<span id="cb30-621"><a href="#cb30-621" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb30-622"><a href="#cb30-622" aria-hidden="true" tabindex="-1"></a>newton.optimize(<span class="fl">2.95</span>, np.cos)</span>
+<span id="cb30-623"><a href="#cb30-623" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb30-624"><a href="#cb30-624" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-625"><a href="#cb30-625" aria-hidden="true" tabindex="-1"></a>We'll work in our Jupyter notebook.</span>
+<span id="cb30-625"><a href="#cb30-625" aria-hidden="true" tabindex="-1"></a>Clearly that doesn't work. Let's debug it.</span>
 <span id="cb30-626"><a href="#cb30-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-627"><a href="#cb30-627" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First turn on debugging capability by clicking on the small "bug" icon of the top navigation bar under the file tabs and to the left of the  info about the kernel.</span>
-<span id="cb30-628"><a href="#cb30-628" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Next we click on a line of code to set a breakpoint.</span>
-<span id="cb30-629"><a href="#cb30-629" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Now we run the function by executing the cell containing the function call. Using the icons in the <span class="in">`Callstack`</span> pane, we can:</span>
-<span id="cb30-630"><a href="#cb30-630" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>continue (to the end or the next breakpoint),</span>
-<span id="cb30-631"><a href="#cb30-631" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>finish,</span>
-<span id="cb30-632"><a href="#cb30-632" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>run the next line,</span>
-<span id="cb30-633"><a href="#cb30-633" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>step (in/down) into a nested function</span>
-<span id="cb30-634"><a href="#cb30-634" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>step (out/up) out of a function, or</span>
-<span id="cb30-635"><a href="#cb30-635" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>evaluate an expression</span>
-<span id="cb30-636"><a href="#cb30-636" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-637"><a href="#cb30-637" aria-hidden="true" tabindex="-1"></a>Here are screenshots showing the steps/components of the visual debugger:</span>
+<span id="cb30-627"><a href="#cb30-627" aria-hidden="true" tabindex="-1"></a>We'll work in our Jupyter notebook.</span>
+<span id="cb30-628"><a href="#cb30-628" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-629"><a href="#cb30-629" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First turn on debugging capability by clicking on the small "bug" icon of the top navigation bar under the file tabs and to the left of the  info about the kernel.</span>
+<span id="cb30-630"><a href="#cb30-630" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Next we click on a line of code to set a breakpoint.</span>
+<span id="cb30-631"><a href="#cb30-631" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Now we run the function by executing the cell containing the function call. Using the icons in the <span class="in">`Callstack`</span> pane, we can:</span>
+<span id="cb30-632"><a href="#cb30-632" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>continue (to the end or the next breakpoint),</span>
+<span id="cb30-633"><a href="#cb30-633" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>finish,</span>
+<span id="cb30-634"><a href="#cb30-634" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>run the next line,</span>
+<span id="cb30-635"><a href="#cb30-635" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>step (in/down) into a nested function</span>
+<span id="cb30-636"><a href="#cb30-636" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>step (out/up) out of a function, or</span>
+<span id="cb30-637"><a href="#cb30-637" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>evaluate an expression</span>
 <span id="cb30-638"><a href="#cb30-638" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-639"><a href="#cb30-639" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb30-640"><a href="#cb30-640" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access debugger</span></span>
-<span id="cb30-641"><a href="#cb30-641" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-642"><a href="#cb30-642" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot1a.pdf "Access the debugger")</span>{width=800 height=600}</span>
+<span id="cb30-639"><a href="#cb30-639" aria-hidden="true" tabindex="-1"></a>Here are screenshots showing the steps/components of the visual debugger:</span>
+<span id="cb30-640"><a href="#cb30-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-641"><a href="#cb30-641" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb30-642"><a href="#cb30-642" aria-hidden="true" tabindex="-1"></a><span class="fu">## Access debugger</span></span>
 <span id="cb30-643"><a href="#cb30-643" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-644"><a href="#cb30-644" aria-hidden="true" tabindex="-1"></a><span class="fu">## Start execution</span></span>
+<span id="cb30-644"><a href="#cb30-644" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot1a.pdf "Access the debugger")</span>{width=800 height=600}</span>
 <span id="cb30-645"><a href="#cb30-645" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-646"><a href="#cb30-646" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot2a.pdf "Set a breakpoint and start execution")</span>{width=800 height=600}</span>
+<span id="cb30-646"><a href="#cb30-646" aria-hidden="true" tabindex="-1"></a><span class="fu">## Start execution</span></span>
 <span id="cb30-647"><a href="#cb30-647" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-648"><a href="#cb30-648" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step into code</span></span>
+<span id="cb30-648"><a href="#cb30-648" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot2a.pdf "Set a breakpoint and start execution")</span>{width=800 height=600}</span>
 <span id="cb30-649"><a href="#cb30-649" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-650"><a href="#cb30-650" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot3a.pdf "Step into a function")</span>{width=800 height=600}</span>
+<span id="cb30-650"><a href="#cb30-650" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step into code</span></span>
 <span id="cb30-651"><a href="#cb30-651" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-652"><a href="#cb30-652" aria-hidden="true" tabindex="-1"></a><span class="fu">## Control execution</span></span>
+<span id="cb30-652"><a href="#cb30-652" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot3a.pdf "Step into a function")</span>{width=800 height=600}</span>
 <span id="cb30-653"><a href="#cb30-653" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-654"><a href="#cb30-654" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot4a.pdf "Control execution")</span>{width=800 height=600}</span>
+<span id="cb30-654"><a href="#cb30-654" aria-hidden="true" tabindex="-1"></a><span class="fu">## Control execution</span></span>
 <span id="cb30-655"><a href="#cb30-655" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-656"><a href="#cb30-656" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluate code</span></span>
+<span id="cb30-656"><a href="#cb30-656" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot4a.pdf "Control execution")</span>{width=800 height=600}</span>
 <span id="cb30-657"><a href="#cb30-657" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-658"><a href="#cb30-658" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-659"><a href="#cb30-659" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot7.png "Evaluate code in context")</span>{width=800 height=600}</span>
+<span id="cb30-658"><a href="#cb30-658" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluate code</span></span>
+<span id="cb30-659"><a href="#cb30-659" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-660"><a href="#cb30-660" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-661"><a href="#cb30-661" aria-hidden="true" tabindex="-1"></a><span class="fu">## View result</span></span>
+<span id="cb30-661"><a href="#cb30-661" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot7.png "Evaluate code in context")</span>{width=800 height=600}</span>
 <span id="cb30-662"><a href="#cb30-662" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-663"><a href="#cb30-663" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot8.png "View result of evaluation")</span>{width=800 height=600}</span>
+<span id="cb30-663"><a href="#cb30-663" aria-hidden="true" tabindex="-1"></a><span class="fu">## View result</span></span>
 <span id="cb30-664"><a href="#cb30-664" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-665"><a href="#cb30-665" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb30-665"><a href="#cb30-665" aria-hidden="true" tabindex="-1"></a><span class="al">![](shot8.png "View result of evaluation")</span>{width=800 height=600}</span>
 <span id="cb30-666"><a href="#cb30-666" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-667"><a href="#cb30-667" aria-hidden="true" tabindex="-1"></a>If we want to debug into functions defined in files, we can add <span class="in">`breakpoint()`</span> in the location in the file where we want the breakpoint and one should see the code in the <span class="in">`SOURCE`</span> box in the debugger panel. So far, I haven't gotten this to work with Jupyter, but that may well just be my inexperience with the JupyterLab debugger.</span>
+<span id="cb30-667"><a href="#cb30-667" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-668"><a href="#cb30-668" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-669"><a href="#cb30-669" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb30-670"><a href="#cb30-670" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb30-671"><a href="#cb30-671" aria-hidden="true" tabindex="-1"></a>Note that the value of <span class="in">`x_new`</span> doesn't show up automatically in the variables pane. This is probably because it is a numpy variable rather than a regular Python variable.</span>
-<span id="cb30-672"><a href="#cb30-672" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-673"><a href="#cb30-673" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-674"><a href="#cb30-674" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-675"><a href="#cb30-675" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using the IPython debugger (`ipdb`)</span></span>
+<span id="cb30-669"><a href="#cb30-669" aria-hidden="true" tabindex="-1"></a>If we want to debug into functions defined in files, we can add <span class="in">`breakpoint()`</span> in the location in the file where we want the breakpoint and one should see the code in the <span class="in">`SOURCE`</span> box in the debugger panel. So far, I haven't gotten this to work with Jupyter, but that may well just be my inexperience with the JupyterLab debugger.</span>
+<span id="cb30-670"><a href="#cb30-670" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-671"><a href="#cb30-671" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb30-672"><a href="#cb30-672" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb30-673"><a href="#cb30-673" aria-hidden="true" tabindex="-1"></a>Note that the value of <span class="in">`x_new`</span> doesn't show up automatically in the variables pane. This is probably because it is a numpy variable rather than a regular Python variable.</span>
+<span id="cb30-674"><a href="#cb30-674" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb30-675"><a href="#cb30-675" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-676"><a href="#cb30-676" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-677"><a href="#cb30-677" aria-hidden="true" tabindex="-1"></a>We can use the IPython <span class="in">`%debug`</span> "magic" to activate a debugger as well.</span>
+<span id="cb30-677"><a href="#cb30-677" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using the IPython debugger (`ipdb`)</span></span>
 <span id="cb30-678"><a href="#cb30-678" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-679"><a href="#cb30-679" aria-hidden="true" tabindex="-1"></a>One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We (re)run the code that is failing. Then we run <span class="in">`%debug`</span> and the <span class="in">`ipdb`</span> debugger will be invoked at the point of the error. For this to work, we need to first turn on the Jupyter notebook debugger.</span>
+<span id="cb30-679"><a href="#cb30-679" aria-hidden="true" tabindex="-1"></a>We can use the IPython <span class="in">`%debug`</span> "magic" to activate a debugger as well.</span>
 <span id="cb30-680"><a href="#cb30-680" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-681"><a href="#cb30-681" aria-hidden="true" tabindex="-1"></a>Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):</span>
+<span id="cb30-681"><a href="#cb30-681" aria-hidden="true" tabindex="-1"></a>One way this is particularly useful is "post-mortem" debugging, i.e., debugging when exceptions (errors) have occurred. We (re)run the code that is failing. Then we run <span class="in">`%debug`</span> and the <span class="in">`ipdb`</span> debugger will be invoked at the point of the error. For this to work, we need to first turn on the Jupyter notebook debugger.</span>
 <span id="cb30-682"><a href="#cb30-682" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-683"><a href="#cb30-683" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`c`</span> to continue execution (until the end or the next breakpoint)</span>
-<span id="cb30-684"><a href="#cb30-684" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`n`</span> to run the next line of code</span>
-<span id="cb30-685"><a href="#cb30-685" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`u`</span> and <span class="in">`d`</span> to step up and down through the stack of function calls</span>
-<span id="cb30-686"><a href="#cb30-686" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`p expr`</span> to print the result of the <span class="in">`expr`</span> code</span>
-<span id="cb30-687"><a href="#cb30-687" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`q`</span> to quit the debugger</span>
-<span id="cb30-688"><a href="#cb30-688" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-689"><a href="#cb30-689" aria-hidden="true" tabindex="-1"></a>We'll put a silly error into the code, restart the kernel, and use the post-mortem debugging approach as an illustration.</span>
+<span id="cb30-683"><a href="#cb30-683" aria-hidden="true" tabindex="-1"></a>Once in the ipdb debugger, we can use these commands (most of which correspond to icons we used to control the JupyterLab debugger behavior):</span>
+<span id="cb30-684"><a href="#cb30-684" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-685"><a href="#cb30-685" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`c`</span> to continue execution (until the end or the next breakpoint)</span>
+<span id="cb30-686"><a href="#cb30-686" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`n`</span> to run the next line of code</span>
+<span id="cb30-687"><a href="#cb30-687" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`u`</span> and <span class="in">`d`</span> to step up and down through the stack of function calls</span>
+<span id="cb30-688"><a href="#cb30-688" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`p expr`</span> to print the result of the <span class="in">`expr`</span> code</span>
+<span id="cb30-689"><a href="#cb30-689" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`q`</span> to quit the debugger</span>
 <span id="cb30-690"><a href="#cb30-690" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-691"><a href="#cb30-691" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: debugging your Newton code</span></span>
+<span id="cb30-691"><a href="#cb30-691" aria-hidden="true" tabindex="-1"></a>We'll put a silly error into the code, restart the kernel, and use the post-mortem debugging approach as an illustration.</span>
 <span id="cb30-692"><a href="#cb30-692" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-693"><a href="#cb30-693" aria-hidden="true" tabindex="-1"></a>Run your Newton method on the following function, $x^4/4 - x^3 -x$, for various starting values.</span>
-<span id="cb30-694"><a href="#cb30-694" aria-hidden="true" tabindex="-1"></a>Sometimes it should fail.</span>
-<span id="cb30-695"><a href="#cb30-695" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-696"><a href="#cb30-696" aria-hidden="true" tabindex="-1"></a>Use the debugger to try to see what goes wrong. (For our purposes here, do this using the debugger; don't figure it out from first principles mathematically or graphically.)</span>
+<span id="cb30-693"><a href="#cb30-693" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: debugging your Newton code</span></span>
+<span id="cb30-694"><a href="#cb30-694" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-695"><a href="#cb30-695" aria-hidden="true" tabindex="-1"></a>Run your Newton method on the following function, $x^4/4 - x^3 -x$, for various starting values.</span>
+<span id="cb30-696"><a href="#cb30-696" aria-hidden="true" tabindex="-1"></a>Sometimes it should fail.</span>
 <span id="cb30-697"><a href="#cb30-697" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-698"><a href="#cb30-698" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Conditional breakpoints"}</span>
+<span id="cb30-698"><a href="#cb30-698" aria-hidden="true" tabindex="-1"></a>Use the debugger to try to see what goes wrong. (For our purposes here, do this using the debugger; don't figure it out from first principles mathematically or graphically.)</span>
 <span id="cb30-699"><a href="#cb30-699" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-700"><a href="#cb30-700" aria-hidden="true" tabindex="-1"></a>Conditional breakpoints are a useful tool that causes the debugger to stop at a breakpoint only if some condition is true (e.g., if some extreme value is reached in the Newton iterations). I don't see that it's possible to do this with the JupyterLab debugger, but with the <span class="in">`ipdb`</span> debugger you can do things like this to debug a particular line of a particular file if a condition (here <span class="in">`x==5`</span>) is met:</span>
+<span id="cb30-700"><a href="#cb30-700" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Conditional breakpoints"}</span>
 <span id="cb30-701"><a href="#cb30-701" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-702"><a href="#cb30-702" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-703"><a href="#cb30-703" aria-hidden="true" tabindex="-1"></a><span class="in">b path/to/script.py:999, x==5</span></span>
+<span id="cb30-702"><a href="#cb30-702" aria-hidden="true" tabindex="-1"></a>Conditional breakpoints are a useful tool that causes the debugger to stop at a breakpoint only if some condition is true (e.g., if some extreme value is reached in the Newton iterations). I don't see that it's possible to do this with the JupyterLab debugger, but with the <span class="in">`ipdb`</span> debugger you can do things like this to debug a particular line of a particular file if a condition (here <span class="in">`x==5`</span>) is met:</span>
+<span id="cb30-703"><a href="#cb30-703" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-704"><a href="#cb30-704" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-705"><a href="#cb30-705" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-706"><a href="#cb30-706" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb30-705"><a href="#cb30-705" aria-hidden="true" tabindex="-1"></a><span class="in">b path/to/script.py:999, x==5</span></span>
+<span id="cb30-706"><a href="#cb30-706" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb30-707"><a href="#cb30-707" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-708"><a href="#cb30-708" aria-hidden="true" tabindex="-1"></a><span class="fu"># 6. Defensive programming, error checking and testing</span></span>
+<span id="cb30-708"><a href="#cb30-708" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-709"><a href="#cb30-709" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-710"><a href="#cb30-710" aria-hidden="true" tabindex="-1"></a><span class="fu">## Demo: Unit tests and `pytest`</span></span>
+<span id="cb30-710"><a href="#cb30-710" aria-hidden="true" tabindex="-1"></a><span class="fu"># 6. Defensive programming, error checking and testing</span></span>
 <span id="cb30-711"><a href="#cb30-711" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-712"><a href="#cb30-712" aria-hidden="true" tabindex="-1"></a><span class="in">`pytest`</span> is a very popular package/framework for testing. </span>
+<span id="cb30-712"><a href="#cb30-712" aria-hidden="true" tabindex="-1"></a><span class="fu">## Demo: Unit tests and `pytest`</span></span>
 <span id="cb30-713"><a href="#cb30-713" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-714"><a href="#cb30-714" aria-hidden="true" tabindex="-1"></a>We create test functions that check for the expected result.</span>
+<span id="cb30-714"><a href="#cb30-714" aria-hidden="true" tabindex="-1"></a><span class="in">`pytest`</span> is a very popular package/framework for testing. </span>
 <span id="cb30-715"><a href="#cb30-715" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-716"><a href="#cb30-716" aria-hidden="true" tabindex="-1"></a>We use <span class="in">`assert`</span> statements. These are ways of generally setting up sanity checks in your code. They are usually used in development, or perhaps data analysis workflows, rather than production code. They are a core part of setting up tests such as here with <span class="in">`pytest`</span>.</span>
+<span id="cb30-716"><a href="#cb30-716" aria-hidden="true" tabindex="-1"></a>We create test functions that check for the expected result.</span>
 <span id="cb30-717"><a href="#cb30-717" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-718"><a href="#cb30-718" aria-hidden="true" tabindex="-1"></a>Let's look at a small example test file and then run the tests:</span>
+<span id="cb30-718"><a href="#cb30-718" aria-hidden="true" tabindex="-1"></a>We use <span class="in">`assert`</span> statements. These are ways of generally setting up sanity checks in your code. They are usually used in development, or perhaps data analysis workflows, rather than production code. They are a core part of setting up tests such as here with <span class="in">`pytest`</span>.</span>
 <span id="cb30-719"><a href="#cb30-719" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-720"><a href="#cb30-720" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb30-721"><a href="#cb30-721" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> test_newton.py</span>
-<span id="cb30-722"><a href="#cb30-722" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-723"><a href="#cb30-723" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> test_newton.py</span>
-<span id="cb30-724"><a href="#cb30-724" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-725"><a href="#cb30-725" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-726"><a href="#cb30-726" aria-hidden="true" tabindex="-1"></a>(From within Python, you can run <span class="in">`pytest.main()`</span>.)</span>
+<span id="cb30-720"><a href="#cb30-720" aria-hidden="true" tabindex="-1"></a>Let's look at a small example test file and then run the tests:</span>
+<span id="cb30-721"><a href="#cb30-721" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-722"><a href="#cb30-722" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb30-723"><a href="#cb30-723" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> test_newton.py</span>
+<span id="cb30-724"><a href="#cb30-724" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-725"><a href="#cb30-725" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> test_newton.py</span>
+<span id="cb30-726"><a href="#cb30-726" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb30-727"><a href="#cb30-727" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-728"><a href="#cb30-728" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Test cases</span></span>
+<span id="cb30-728"><a href="#cb30-728" aria-hidden="true" tabindex="-1"></a>(From within Python, you can run <span class="in">`pytest.main()`</span>.)</span>
 <span id="cb30-729"><a href="#cb30-729" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-730"><a href="#cb30-730" aria-hidden="true" tabindex="-1"></a>With a partner, brainstorm some test cases for your implementation of Newton's method in terms of the user's function and input values a user might provide.</span>
+<span id="cb30-730"><a href="#cb30-730" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Test cases</span></span>
 <span id="cb30-731"><a href="#cb30-731" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-732"><a href="#cb30-732" aria-hidden="true" tabindex="-1"></a>In addition to cases where it should succeed, you'll want to consider cases where Newton's method fails and test whether the user gets an informative result. Of course as a starting point, the case we used for the debugging exercise is a good one for a failing case. </span>
+<span id="cb30-732"><a href="#cb30-732" aria-hidden="true" tabindex="-1"></a>With a partner, brainstorm some test cases for your implementation of Newton's method in terms of the user's function and input values a user might provide.</span>
 <span id="cb30-733"><a href="#cb30-733" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-734"><a href="#cb30-734" aria-hidden="true" tabindex="-1"></a>We'll collect some possible tests once each group has had a chance to brainstorm.</span>
+<span id="cb30-734"><a href="#cb30-734" aria-hidden="true" tabindex="-1"></a>In addition to cases where it should succeed, you'll want to consider cases where Newton's method fails and test whether the user gets an informative result. Of course as a starting point, the case we used for the debugging exercise is a good one for a failing case. </span>
 <span id="cb30-735"><a href="#cb30-735" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-736"><a href="#cb30-736" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Unit tests</span></span>
+<span id="cb30-736"><a href="#cb30-736" aria-hidden="true" tabindex="-1"></a>We'll collect some possible tests once each group has had a chance to brainstorm.</span>
 <span id="cb30-737"><a href="#cb30-737" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-738"><a href="#cb30-738" aria-hidden="true" tabindex="-1"></a>Implement your test cases as unit tests using the <span class="in">`pytest`</span> package.</span>
+<span id="cb30-738"><a href="#cb30-738" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Unit tests</span></span>
 <span id="cb30-739"><a href="#cb30-739" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-740"><a href="#cb30-740" aria-hidden="true" tabindex="-1"></a>Include tests for:</span>
+<span id="cb30-740"><a href="#cb30-740" aria-hidden="true" tabindex="-1"></a>Implement your test cases as unit tests using the <span class="in">`pytest`</span> package.</span>
 <span id="cb30-741"><a href="#cb30-741" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-742"><a href="#cb30-742" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>successful optimization</span>
-<span id="cb30-743"><a href="#cb30-743" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>unsuccessful optimization</span>
-<span id="cb30-744"><a href="#cb30-744" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>invalid user inputs (i.e., checking the error is correctly trapped) </span>
-<span id="cb30-745"><a href="#cb30-745" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>(if you have time) situations where Newton's method is not converging to a local minimum</span>
-<span id="cb30-746"><a href="#cb30-746" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-747"><a href="#cb30-747" aria-hidden="true" tabindex="-1"></a>with the expected output being what you *want* to happen, not necessarily what your function does.</span>
+<span id="cb30-742"><a href="#cb30-742" aria-hidden="true" tabindex="-1"></a>Include tests for:</span>
+<span id="cb30-743"><a href="#cb30-743" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-744"><a href="#cb30-744" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>successful optimization</span>
+<span id="cb30-745"><a href="#cb30-745" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>unsuccessful optimization</span>
+<span id="cb30-746"><a href="#cb30-746" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>invalid user inputs (i.e., checking the error is correctly trapped) </span>
+<span id="cb30-747"><a href="#cb30-747" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>(if you have time) situations where Newton's method is not converging to a local minimum</span>
 <span id="cb30-748"><a href="#cb30-748" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-749"><a href="#cb30-749" aria-hidden="true" tabindex="-1"></a>You'll want cases where you know the correct answer. Start simple.</span>
+<span id="cb30-749"><a href="#cb30-749" aria-hidden="true" tabindex="-1"></a>with the expected output being what you *want* to happen, not necessarily what your function does.</span>
 <span id="cb30-750"><a href="#cb30-750" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-751"><a href="#cb30-751" aria-hidden="true" tabindex="-1"></a>::: {.callout-caution}</span>
-<span id="cb30-752"><a href="#cb30-752" aria-hidden="true" tabindex="-1"></a><span class="fu">## Only write tests now</span></span>
-<span id="cb30-753"><a href="#cb30-753" aria-hidden="true" tabindex="-1"></a>For now don't modify your code even if you start to suspect how it might fail. Writing the tests and then modifying code so they pass is an example of *test-driven development*.</span>
-<span id="cb30-754"><a href="#cb30-754" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb30-755"><a href="#cb30-755" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-756"><a href="#cb30-756" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exceptions in Python</span></span>
+<span id="cb30-751"><a href="#cb30-751" aria-hidden="true" tabindex="-1"></a>You'll want cases where you know the correct answer. Start simple.</span>
+<span id="cb30-752"><a href="#cb30-752" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-753"><a href="#cb30-753" aria-hidden="true" tabindex="-1"></a>::: {.callout-caution}</span>
+<span id="cb30-754"><a href="#cb30-754" aria-hidden="true" tabindex="-1"></a><span class="fu">## Only write tests now</span></span>
+<span id="cb30-755"><a href="#cb30-755" aria-hidden="true" tabindex="-1"></a>For now don't modify your code even if you start to suspect how it might fail. Writing the tests and then modifying code so they pass is an example of *test-driven development*.</span>
+<span id="cb30-756"><a href="#cb30-756" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-757"><a href="#cb30-757" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-758"><a href="#cb30-758" aria-hidden="true" tabindex="-1"></a>To understand how Python handles error, you can take a look at the <span class="co">[</span><span class="ot">Errors and Exceptions section</span><span class="co">](https://swcarpentry.github.io/python-novice-inflammation/09-errors.html)</span>{target="_blank"} of the Software Carpentry workshop. The primary ideas covered are understanding error messages and tracebacks.</span>
+<span id="cb30-758"><a href="#cb30-758" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exceptions in Python</span></span>
 <span id="cb30-759"><a href="#cb30-759" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-760"><a href="#cb30-760" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Error trapping, robust code, and defensive programming</span></span>
+<span id="cb30-760"><a href="#cb30-760" aria-hidden="true" tabindex="-1"></a>To understand how Python handles error, you can take a look at the <span class="co">[</span><span class="ot">Errors and Exceptions section</span><span class="co">](https://swcarpentry.github.io/python-novice-inflammation/09-errors.html)</span>{target="_blank"} of the Software Carpentry workshop. The primary ideas covered are understanding error messages and tracebacks.</span>
 <span id="cb30-761"><a href="#cb30-761" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-762"><a href="#cb30-762" aria-hidden="true" tabindex="-1"></a>Now we'll try to go beyond simply returning a failed result and see if we can trap problems early on and write more robust code. </span>
+<span id="cb30-762"><a href="#cb30-762" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Error trapping, robust code, and defensive programming</span></span>
 <span id="cb30-763"><a href="#cb30-763" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-764"><a href="#cb30-764" aria-hidden="true" tabindex="-1"></a>Work on the following improvements:</span>
+<span id="cb30-764"><a href="#cb30-764" aria-hidden="true" tabindex="-1"></a>Now we'll try to go beyond simply returning a failed result and see if we can trap problems early on and write more robust code. </span>
 <span id="cb30-765"><a href="#cb30-765" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-766"><a href="#cb30-766" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check user inputs are valid.</span>
-<span id="cb30-767"><a href="#cb30-767" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add warnings to the user if it seems that Newton's method is taking a bad step.</span>
-<span id="cb30-768"><a href="#cb30-768" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modify your function so that when it fails, the result is informative to the user.</span>
-<span id="cb30-769"><a href="#cb30-769" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Include a success/failure code (flag) in your output.</span>
-<span id="cb30-770"><a href="#cb30-770" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-771"><a href="#cb30-771" aria-hidden="true" tabindex="-1"></a>Your code should handle errors using exceptions, as discussed earlier for Python itself. We don't have time to go fully into how Python handles the wide variety of exceptions. But here are a few basic things you can do to *raise* an *exception* (i.e., to report an error and stop execution):</span>
+<span id="cb30-766"><a href="#cb30-766" aria-hidden="true" tabindex="-1"></a>Work on the following improvements:</span>
+<span id="cb30-767"><a href="#cb30-767" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-768"><a href="#cb30-768" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check user inputs are valid.</span>
+<span id="cb30-769"><a href="#cb30-769" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add warnings to the user if it seems that Newton's method is taking a bad step.</span>
+<span id="cb30-770"><a href="#cb30-770" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modify your function so that when it fails, the result is informative to the user.</span>
+<span id="cb30-771"><a href="#cb30-771" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Include a success/failure code (flag) in your output.</span>
 <span id="cb30-772"><a href="#cb30-772" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-773"><a href="#cb30-773" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-774"><a href="#cb30-774" aria-hidden="true" tabindex="-1"></a><span class="in">if not callable(f):</span></span>
-<span id="cb30-775"><a href="#cb30-775" aria-hidden="true" tabindex="-1"></a><span class="in">   raise TypeError(f"Argument is not a function, it is of type {type(f)}")</span></span>
-<span id="cb30-776"><a href="#cb30-776" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-777"><a href="#cb30-777" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-773"><a href="#cb30-773" aria-hidden="true" tabindex="-1"></a>Your code should handle errors using exceptions, as discussed earlier for Python itself. We don't have time to go fully into how Python handles the wide variety of exceptions. But here are a few basic things you can do to *raise* an *exception* (i.e., to report an error and stop execution):</span>
+<span id="cb30-774"><a href="#cb30-774" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-775"><a href="#cb30-775" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-776"><a href="#cb30-776" aria-hidden="true" tabindex="-1"></a><span class="in">if not callable(f):</span></span>
+<span id="cb30-777"><a href="#cb30-777" aria-hidden="true" tabindex="-1"></a><span class="in">   raise TypeError(f"Argument is not a function, it is of type {type(f)}")</span></span>
 <span id="cb30-778"><a href="#cb30-778" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-779"><a href="#cb30-779" aria-hidden="true" tabindex="-1"></a><span class="in">if x &gt; 1e7:</span></span>
-<span id="cb30-780"><a href="#cb30-780" aria-hidden="true" tabindex="-1"></a><span class="in">   raise RuntimeError(f"At iteration {iter}, optimization appears to be diverging")</span></span>
-<span id="cb30-781"><a href="#cb30-781" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-782"><a href="#cb30-782" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-779"><a href="#cb30-779" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-780"><a href="#cb30-780" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-781"><a href="#cb30-781" aria-hidden="true" tabindex="-1"></a><span class="in">if x &gt; 1e7:</span></span>
+<span id="cb30-782"><a href="#cb30-782" aria-hidden="true" tabindex="-1"></a><span class="in">   raise RuntimeError(f"At iteration {iter}, optimization appears to be diverging")</span></span>
 <span id="cb30-783"><a href="#cb30-783" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb30-784"><a href="#cb30-784" aria-hidden="true" tabindex="-1"></a><span class="in">import warnings</span></span>
-<span id="cb30-785"><a href="#cb30-785" aria-hidden="true" tabindex="-1"></a><span class="in">if x &gt; 3:</span></span>
-<span id="cb30-786"><a href="#cb30-786" aria-hidden="true" tabindex="-1"></a><span class="in">   warnings.warn(f"{x} is greater than 3.", UserWarning)</span></span>
-<span id="cb30-787"><a href="#cb30-787" aria-hidden="true" tabindex="-1"></a><span class="in">```</span>  </span>
-<span id="cb30-788"><a href="#cb30-788" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-789"><a href="#cb30-789" aria-hidden="true" tabindex="-1"></a>Next, if you have time, consider robustifying your code:</span>
+<span id="cb30-784"><a href="#cb30-784" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-785"><a href="#cb30-785" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-786"><a href="#cb30-786" aria-hidden="true" tabindex="-1"></a><span class="in">import warnings</span></span>
+<span id="cb30-787"><a href="#cb30-787" aria-hidden="true" tabindex="-1"></a><span class="in">if x &gt; 3:</span></span>
+<span id="cb30-788"><a href="#cb30-788" aria-hidden="true" tabindex="-1"></a><span class="in">   warnings.warn(f"{x} is greater than 3.", UserWarning)</span></span>
+<span id="cb30-789"><a href="#cb30-789" aria-hidden="true" tabindex="-1"></a><span class="in">```</span>  </span>
 <span id="cb30-790"><a href="#cb30-790" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-791"><a href="#cb30-791" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do to modify what the algorithm does if the next step is worse than the current position?  </span>
-<span id="cb30-792"><a href="#cb30-792" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do if the next step is outside the range of potential values (assuming a unimodal function)? </span>
+<span id="cb30-791"><a href="#cb30-791" aria-hidden="true" tabindex="-1"></a>Next, if you have time, consider robustifying your code:</span>
+<span id="cb30-792"><a href="#cb30-792" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-793"><a href="#cb30-793" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do to modify what the algorithm does if the next step is worse than the current position?  </span>
+<span id="cb30-794"><a href="#cb30-794" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do if the next step is outside the range of potential values (assuming a unimodal function)? </span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

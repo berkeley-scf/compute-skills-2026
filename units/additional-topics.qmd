@@ -166,7 +166,7 @@ Once you've seen the review by your partner:
 
 - On DataHub, make changes to the branch that was used in the pull request. 
   - Alternatively, you could make the changes directly on GitHub using its editing capabilities.
-- Commit and push to GitHub.a
+- Commit and push to GitHub
 - On GitHub, merge in the (now revised) pull request and then close the pull request.
   - You may want to delete the branch. This helps avoid having a profusion of unneeded branches.
 - On DataHub, run `git pull` to get the changes updated in the `main` branch of your local repository.

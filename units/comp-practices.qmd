@@ -178,7 +178,8 @@ Next move (or copy) your Python module into the repository directory. For the de
 
 ```bash
 cd ~/newton-practice
-cp ../compute-skills-2026/units/newton-buggy.py newton.py
+
+cp <location-of-your-newton.py> .
 
 ## Tell git to track the file (put it in the staging area).
 git add newton.py

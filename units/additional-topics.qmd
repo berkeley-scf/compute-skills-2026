@@ -85,7 +85,7 @@ The GitHub UI does a nice job of helping you resolve merge conflicts, as we'll s
 ::: {.callout-tip}
 ## Resolving conflicts at the command line
 
-You can also get (and resolve) merge conflicts on the command line. Git will add some syntax to the conflicted file pointing out the conflicts that need to be resolved. Once you edit the conflicted file to fix the conflict, you can do `git add <name_of_file>` and then `git commit`.
+You can also get (and resolve) merge conflicts on the command line. Git will add some syntax to the conflicted file pointing out the conflicts that need to be resolved. Once you edit the conflicted file to fix the conflict, you then do `git add <name_of_file>` and then `git commit`.
 :::
 
 ## Multivariate Newton's method
@@ -124,9 +124,9 @@ As you are writing the code, you can continue to think about what might go wrong
 
 ## Exercise: Pull requests (PRs)
 
-When you have your branch ready, make a pull request:
+When you have your branch ready (you may not fully finish this, which is ok), make a pull request:
 
-1. Make a pull request into the remote for the repository by pushing the branch to GitHub
+1. Make a pull request into the remote for your repository by pushing the branch to GitHub
    ```bash
    git push -u origin multivariate
    ```
@@ -164,16 +164,17 @@ If you have time, explore these two additional options for making comments:
 
 Once you've seen the review by your partner:
 
-- On DataHub, make changes to the branch that was used in the pull request. Then commit and push to GitHub.
+- On DataHub, make changes to the branch that was used in the pull request. 
   - Alternatively, you could make the changes directly on GitHub using its editing capabilities.
-- On GitHub, merge in the (now revised) pull request and close the request.
+- Commit and push to GitHub.a
+- On GitHub, merge in the (now revised) pull request and then close the pull request.
   - You may want to delete the branch. This helps avoid having a profusion of unneeded branches.
 - On DataHub, run `git pull` to get the changes updated in the `main` branch of your local repository.
 
 ::: {.callout-important}
 ## The full cycle of "git virtue"
 
-Congratulations. In the course of yesterday and  this morning, you've worked through the steps of a complete, albeit small, project using an extensive set of concepts, skills, and tools used in real world projects.
+Congratulations! In the course of yesterday and  this morning, you've worked through the steps of a complete, albeit small, project using an extensive set of concepts, skills, and tools used in real world projects.
 :::
 
 # 8. Numerical analysis and random number generation
@@ -371,8 +372,8 @@ sp.linalg.eigvals(corr_matrix)[80:99]
 Having a finite number of bits to represent each number means there are minimum and maximum numbers that can be expressed.
 
 ```{python}
-1.38e5000
-1.38e-400
+print(1.38e5000)
+print(1.38e-400)
 ```
 
 ::: {.callout-tip}
@@ -410,17 +411,17 @@ np.exp(loglik)
 
 Look at your partner's code in terms of how it handles the stopping criterion or (for the 1-d case) the finite difference estimate of the gradient and Hessian.
 
-Fork your partner's repository. In the local version of that repository on your DataHub, make a change to try to improve how the stopping criterion or finite difference estimate is handled. Then make a pull request back into your partner's repository.
+Fork your partner's repository. In the local version of that repository on your DataHub, make a change to try to improve how the stopping criterion or finite difference estimate is handled.
 
-Here are the detailed steps of how to do all that:
+Then make a pull request back into your partner's repository. Here are the detailed steps of how to do all that:
 
-1. Go to your partner's GitHub page and fork the repository (`https://github.com/<partner_username>/newton-practice/fork`). You can name it `newton-practice-<partner_name>` or something else. 
-2. On DataHub, clone the forked repository: `git clone https://github.com/<your_username>/newton-practice-<partner_name>`.
-3. On DataHub, enter the directory of the cloned repository: `cd newton-practice-<partner_name>`.
+1. Go to your partner's GitHub page and fork the repository (`https://github.com/<partner_username>/newton-practice/fork`). You can name it `newton-practice-<partner_username>` or something else. 
+2. On DataHub, clone the forked repository: `git clone https://github.com/<your_username>/newton-practice-<partner_username>`.
+3. On DataHub, enter the directory of the cloned repository: `cd newton-practice-<partner_username>`.
 4. Make a branch, make changes, add, and commit.
 5. Give DataHub access to the new repository via [Step 3 of the steps for accessing GitHub repository from DataHub](https://berkeley-scf.github.io/compute-skills-2026/prep.html#give-access-to-the-specific-github-repository-you-are-working-with).
-6. Push the commit to your GitHub: `git push -u origin newton-practice-<partner_name>`.
-7. Go to `https://github.com/<your_username>/newton-practice-<partner_name>` and open a pull request ("Compare and pull request") with the new branch. The request will automatically be done in the GitHub account of your partner.
+6. Push the commit to your GitHub: `git push -u origin newton-practice-<partner_username>`.
+7. Go to `https://github.com/<your_username>/newton-practice-<partner_username>` and open a pull request ("Compare and pull request") with the new branch. The request will automatically be done in the GitHub account of your partner.
 
 Then review the pull request your partner made to YOUR repository. Iterate with your partner until you are happy to merge the pull request into your repository. Remember to then run `git pull` to get the changes in the local copy of the repository.
 
@@ -687,7 +688,7 @@ Having reproducible environments (e.g., Conda environments or Docker containers)
 Docker containers share some similarities with Conda environments except that you provide a full specification for the Linux operating system you want to use and software you want installed.
 :::
 
-You need to provide the recipe for the environment or container. The automation system can then set up the environment as a virtual environment/container on the remote machine and run the action/code you request. This could simply be giving you a terminal or starting a Jupyter notebook in the environment and giving you access via your browser.
+When using a reproducible environment, you need to provide the recipe for the Conda environment or container. The automation system can then set up the environment as a virtual environment/container on the remote machine and run the action/code you request. This could simply be giving you a terminal or starting a Jupyter notebook in the environment and giving you access via your browser.
 
 In this section, we'll show some examples of automation with reproducible environments.
 
@@ -714,7 +715,7 @@ In some cases an *image* for the container will already be available, and all th
 
 If we're familiar with what happens when Docker containers and Conda environments are set up, we can see in the Binder logs that a Docker container is set up (using Ubuntu Linux) and one of the steps of doing that is to create a Conda environment within the container.
 
-Let's see the steps that are run if we use the `mytoy` repository to start a Binder environment at `mybinder.org`, specifying `paciorek/mytoy` (forked from `fperez/mytoy`) as the repository. (Note that in a number of cases, the startup has failed, probably because `mybinder` has very limited resources for providing cloud compute resources.)
+Let's see the steps that are run if we use the `mytoy` repository to [start a Binder environment at `mybinder.org`](https://mybinder.org), specifying `paciorek/mytoy` (forked from `fperez/mytoy`) as the repository. (Note that in a number of cases, the startup has failed, probably because `mybinder` has very limited resources for providing cloud compute resources.)
 
 
 ## Example 2: GitHub Actions for automated testing
@@ -779,7 +780,7 @@ Next, let's introduce a failing test to see what the output looks like and get a
 
 ### Exercise: automated testing with your repository
 
-Using `mytoy` as an example, set up automated testing with GitHub Actions in your `newton-practice` repository. Check that you can find the results under `https://github.com/<username>/newton-practice/actions.
+Using `mytoy` as an example, set up automated testing with GitHub Actions in your `newton-practice` repository. Check that you can find the results at `https://github.com/<username>/newton-practice/actions`.
 
 
 ## Example 3: Using GPUs on the National Research Platform (NRP)
